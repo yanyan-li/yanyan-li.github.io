@@ -1,3 +1,3 @@
 # Indoor-SLAM
 
-page: https://yanyan-li.github.io/islam/
+page: [Indoor_SLAM](https://github.com/yanyan-li/Indoor_SLAM)
