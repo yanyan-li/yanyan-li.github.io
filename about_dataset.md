@@ -4,7 +4,7 @@ title: Dataset
 permalink: /about_dataset/
 ---
 
-### Open-Structure Benchmark Dataset 
+### Open-Structure: a Structural Benchmark Dataset for SLAM Parameterization and Optimization Approaches
 <div class="row">
   <div class="col-md-4" markdown="1">
   <!-- ![Alt Text](../img/folder/blah.jpg) -->
