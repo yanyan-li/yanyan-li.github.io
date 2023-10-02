@@ -19,11 +19,22 @@ social: true  # includes social icons at the bottom of the page
 <!-- <div style="float:left;margin:0 10px 10px 0" markdown="1">
     ![book](images/yanyan.png)
 </div> -->
+
 <div style="float:left;margin:0 10px 10px 0" class="col-md-4" markdown="1">
   <!-- ![Alt Text](../img/folder/blah.jpg) -->
   <img height="200px" class="center-block" src="../images/yanyan.png">
   </div>
-
 I'm a Ph.D. student focusing on camera pose estimation, mapping, and scene understanding at Technical University of München. 
 
-My future research interests are SLAM for different sensors, NeRF-SLAM and reinforcement learning.
+My future research interests are SLAM for different sensors, NeRF-SLAM and reinforcement learning.  
+
+
+\
+&nbsp;
+\
+&nbsp;
+
+### Service
+**Conference Reviewer:** ICRA, 3DV, IROS
+
+**Journal Reviewer:** IEEE RA-L, T-RO
