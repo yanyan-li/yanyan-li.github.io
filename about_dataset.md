@@ -19,10 +19,11 @@ permalink: /about_dataset/
 
 | 2D images | Download Link |
 | :---:| :----: |
-| <img src="../images/dataset_img/lrkt2.gif" alt="euroc-esti" style="zoom:25%;" /> | living room 0 <br/> living room 1 <br/> living room 2 <br/> living room 2 <br/> |
-| <img src="../images/dataset_img/ofkt0.gif" alt="euroc-esti" style="zoom:25%;" /> | office room 0 <br/> office room 1 <br/> office room 2 <br/> office room 2 <br/> |
-| <img src="../images/dataset_img/lrkt2.gif" alt="euroc-esti" style="zoom:25%;" /> | living room 0 <br/> living room 1 <br/> living room 2 <br/> living room 2 <br/> |
-| <img src="../images/dataset_img/ofkt0.gif" alt="euroc-esti" style="zoom:25%;" /> | office room 0 <br/> office room 1 <br/> office room 2 <br/> office room 2 <br/> |
+| <img src="../images/dataset_img/lrkt2.gif" alt="living room" style="zoom:25%;" /> | living room 0 <br/> living room 1 <br/> living room 2 <br/> living room 2 <br/> |
+| <img src="../images/dataset_img/ofkt0.gif" alt="office room" style="zoom:25%;" /> | office room 0 <br/> office room 1 <br/> office room 2 <br/> office room 2 <br/> |
+| <img src="../images/dataset_img/japanesealley.gif" alt="tartan scenes" style="zoom:25%;" /> | carwelding <br/> cmu-office2 <br/> endofworld<br/> hospital <br/> japanesealley<br/> neighborhood<br/> |
+| <img src="../images/dataset_img/structure_texture_far.gif" alt="tum rgbd" style="zoom:25%;" /> | struct_texture_far <br/> struct_texture_near <br/> nostruct_texture_near_withloop <br/> nostruct_texture_far <br/> struct_notexture_near<br/> struct_notexture_far|
+| <img src="../images/dataset_img/circle.gif" alt="tum rgbd" style="zoom:25%;" /> | Circle1 <br/> Circle2 <br/> Sphere1 <br/> Sphere2 <br/> Corridor1<br/> Corridor2|
 
 #### 2. Baseline for Optimization
 
