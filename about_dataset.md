@@ -9,7 +9,7 @@ permalink: /about_dataset/
 
 
 <p align="center">
-     <a href="coming soon"><img src="https://img.shields.io/badge/OpenStructure-Paper-yellow.svg"></a>
+     <a href="https://arxiv.org/pdf/2310.10931.pdf"><img src="https://img.shields.io/badge/OpenStructure-Paper-yellow.svg"></a>
   <a href="https://github.com/yanyan-li/Open-Structure/tree/main/dataset"><img src="https://img.shields.io/badge/OpenStructure-Dataset-green.svg"></a>
     <a href="https://github.com/yanyan-li/Open-Structure/tree/main/baseline"><img src="https://img.shields.io/badge/OpenStructure-Baseline-blue.svg"></a>
 </p>

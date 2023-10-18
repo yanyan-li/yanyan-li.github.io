@@ -18,7 +18,11 @@ author:
  *This paper introduces a new benchmark dataset, Open-Structure, for evaluating visual odometry and SLAM methods, which directly equips point and line measurements, correspondences, structural associations, and co-visibility factor graphs instead of providing raw images. Based on the proposed benchmark dataset, these 2D or 3D data can be directly input to different stages of SLAM pipelines to avoid the impact of the data preprocessing modules in ablation experiments.*
 
 
-
+<p align="center">
+     <a href="https://arxiv.org/pdf/2310.10931.pdf"><img src="https://img.shields.io/badge/OpenStructure-Paper-yellow.svg"></a>
+  <a href="https://github.com/yanyan-li/Open-Structure/tree/main/dataset"><img src="https://img.shields.io/badge/OpenStructure-Dataset-green.svg"></a>
+    <a href="https://github.com/yanyan-li/Open-Structure/tree/main/baseline"><img src="https://img.shields.io/badge/OpenStructure-Baseline-blue.svg"></a>
+</p>
 
 ### 1. List of sequences
 
