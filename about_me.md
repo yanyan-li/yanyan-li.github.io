@@ -29,12 +29,24 @@ I'm a Ph.D. student focusing on camera pose estimation, mapping, and scene under
 My future research interests are SLAM for different sensors, NeRF-SLAM and reinforcement learning.  
 
 
-\
-&nbsp;
-\
-&nbsp;
+
+<br />
+
+<br />
+
+### Industry Exploring
+
+2021.05-2022.05  Funder&CEO of  **MetaIntelli Tech** 
+
+*The vision of our startup, MetaIntelli Tech, is to bridge the real and virtual worlds.*
+
+|                  Device for Outdoor Recon.                   |                  Device for Building Recon.                  |     Indoor Recon based on iPad-Pro      |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :-------------------------------------: |
+| <img src="/images/startup/large1.png" alt="large1" style="zoom: 100%;" /> | <img src="/images/startup/large2.png" alt="large2" style="zoom:90%;" /> | ![indoor1](/images/startup/indoor1.gif) |
+| <img src="/images/startup/large2_recon.png" alt="large2_recon" style="zoom:100%;" /> | ![Screenshot from 2023-10-31 16-14-00](/images/startup/large2_reco.png) <img src="/images/startup/large2_navi.png" alt="large2_navi" style="zoom:50%;" /> | ![indoor2](/images/startup/indoor2.gif) |
 
 ### Service
+
 **Conference Reviewer:** ICRA, 3DV, IROS
 
 **Journal Reviewer:** IEEE RA-L, T-RO
