@@ -36,7 +36,7 @@ My future research interests are SLAM for different sensors, NeRF-SLAM and reinf
 
 ### Industry Exploring
 
-2021.05-2022.05  Funder&CEO of  **MetaIntelli Tech** 
+2021.05-2022.05  Co-Founder&CEO of  **MetaIntelli Tech** 
 
 *The vision of our startup, MetaIntelli Tech, is to bridge the real and virtual worlds.*
 
