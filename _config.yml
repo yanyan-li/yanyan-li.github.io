@@ -49,6 +49,7 @@ header_pages:
   - about_visualslam.md
   - about_sensorfusion.md
   - about_dataset.md
+  - about_robot_projects.md
   - about_me.md
 
 # Set to `true` to show excerpts on the homepage.
