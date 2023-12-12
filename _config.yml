@@ -46,8 +46,8 @@ minima:
 # order as they should show up.
 #
 header_pages:
-  - about_visualslam.md
-  - about_sensorfusion.md
+  # - about_visualslam.md
+  # - about_sensorfusion.md
   - about_dataset.md
   - about_robot_projects.md
   - about_me.md
