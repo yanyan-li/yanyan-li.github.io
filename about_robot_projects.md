@@ -12,8 +12,8 @@ permalink: /about_robot_projects/
 **Time:** 2023.09-2024.01
 
 | | |
-| :------------------------------------------------------------: | :------------------------------------------------------------: | 
-| <img src="/images/real_robots/outlook.jpg" alt="outlook" style="zoom: 20%;" /> | <img src="/images/real_robots/live.gif" alt="live" style="zoom: 60%;" /> |
+| :------------------------------------------------------------: | :------------------------------------------------------------: |
+| <img src="/images/real_robots/outlook.jpg" alt="outlook" style="zoom: 20%;" /> <img src="/images/real_robots/live.gif" alt="outlook" /> | <img src="/images/real_robots/outlook1.jpg" alt="live" style="zoom: 60%;" /> |
 
 
 
