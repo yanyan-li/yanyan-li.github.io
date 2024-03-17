@@ -48,6 +48,8 @@ minima:
 header_pages:
   # - about_visualslam.md
   # - about_sensorfusion.md
+  # - about_paperreading
+  - about_gaussian_splatting.md
   - about_dataset.md
   - about_robot_projects.md
   - about_me.md
