@@ -105,7 +105,7 @@ metric Consistency">
               <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Federico Tombar</a>,
+              <a href="https://federicotombari.github.io/">Federico Tombari</a>
             </span>
           </div>
 
@@ -178,15 +178,16 @@ metric Consistency">
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+      <p> &#8611; Rendering of views that have already been seen </p>
+      <video id="teaser_1" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser_training.mp4"
+                type="video/mp4"> 
+      </video>
+      <p> &#8611; Rendering of views that are novel and challenging </p>
+      <video id="teaser_2" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser_challenging.mp4"
                 type="video/mp4">
       </video>
-      <!-- <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2> -->
     </div>
   </div>
 </section>
@@ -197,12 +198,19 @@ metric Consistency">
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{2024geogaussian,
-  <!-- author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+    <pre><code>
+      <!-- @article{2024geogaussian,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
   title     = {Nerfies: Deformable Neural Radiance Fields},
   journal   = {ICCV},
-  year      = {2021}, -->
-}</code></pre>
+  year      = {2021},} -->
+  </code></pre>
+  <h2 class="title">Reference</h2>
+  <pre>
+  [3DGS]Kerbl, B., Kopanas, G., Leimkühler, T., & Drettakis, G. (2023). 
+          3D gaussian splatting for real-time radiance field rendering. ACM Transactions on Graphics, 42(4), 1-14.
+  [LightGS]Fan, Z., Wang, K., Wen, K., Zhu, Z., Xu, D. and Wang, Z., (2023). 
+          Lightgaussian: Unbounded 3d gaussian compression with 15x reduction and 200+ fps. arXiv preprint arXiv:2311.17245.</pre>  
   </div>
 </section>
 
