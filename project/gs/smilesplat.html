@@ -1,21 +1,12 @@
-<!--
- * @Author: yanyan-li yanyan.li.camp@gmail.com
- * @Date: 2024-11-24 17:24:40
- * @LastEditTime: 2024-11-24 17:24:41
- * @LastEditors: yanyan-li yanyan.li.camp@gmail.com
- * @Description: 
- * @FilePath: /yanyan-li.github.io/project/gs/geogaussian copy.html
--->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <!-- <meta name="description" -->
         <!-- content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."> -->
-  <meta name="keywords" content="Gaussian Splatting, eometry-aware Densification, Geo-
-metric Consistency">
+  <meta name="keywords" content="Generalizable Gaussian Splatting, Bundle adjustment">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering</title>
+  <title>SmileSplat: Generalizable Gaussian Splats for Unconstrained Sparse images</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -41,7 +32,7 @@ metric Consistency">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/logo.png">
+  <link rel="icon" href="./static/images/logo_smile.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -97,23 +88,17 @@ metric Consistency">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering</h1>
+          <h1 class="title is-1 publication-title">SmileSplat: Generalizable Gaussian Splats for Unconstrained Sparse Images</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yanyan-li.github.io/">Yanyan Li</a>,</span>
             <span class="author-block">
-              <a href="https://">Chenyu Lyu</a>,</span>
+              <a href="https://">Yixin Fang</a>,</span>
             <span class="author-block">
-              <a href="https://">Yan Di</a>,
-            </span>
-            <span class="author-block">
-              <a href="http://">Guangyao Zhai</a>,
+              <a href="https://federicotombari.github.io/">Federico Tombari</a>
             </span>
             <span class="author-block">
               <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://federicotombari.github.io/">Federico Tombari</a>
             </span>
           </div>
 
@@ -126,16 +111,6 @@ metric Consistency">
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https:"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="http://arxiv.org/abs/2403.11324"
                    class="external-link button is-normal is-rounded is-dark">
@@ -143,16 +118,6 @@ metric Consistency">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https:"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
                 </a>
               </span>
               <!-- Code Link. -->
