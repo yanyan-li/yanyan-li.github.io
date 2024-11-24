@@ -1,0 +1,276 @@
+<!--
+ * @Author: yanyan-li yanyan.li.camp@gmail.com
+ * @Date: 2024-11-24 17:24:40
+ * @LastEditTime: 2024-11-24 17:24:41
+ * @LastEditors: yanyan-li yanyan.li.camp@gmail.com
+ * @Description: 
+ * @FilePath: /yanyan-li.github.io/project/gs/geogaussian copy.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="description" -->
+        <!-- content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."> -->
+  <meta name="keywords" content="Gaussian Splatting, eometry-aware Densification, Geo-
+metric Consistency">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation"> -->
+  <!-- <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div> -->
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div> 
+    </div>
+
+  </div> -->
+<!-- </nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yanyan-li.github.io/">Yanyan Li</a>,</span>
+            <span class="author-block">
+              <a href="https://">Chenyu Lyu</a>,</span>
+            <span class="author-block">
+              <a href="https://">Yan Di</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://">Guangyao Zhai</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://federicotombari.github.io/">Federico Tombari</a>
+            </span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technical University of Munich,</span>
+            <span class="author-block"><sup>2</sup>Tianjin University</span>
+            <span class="author-block"><sup>2</sup>Tianjin University</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https:"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/2403.11324"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https:"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yanyan-li/GeoGaussian"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <p> &#8611; Rendering of views that have already been seen </p>
+      <video id="teaser_1" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser_training.mp4"
+                type="video/mp4"> 
+      </video>
+       <p> &#8611; Rendering of views that are novel and challenging </p>
+      <video id="teaser_2" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser_challenging_highlight.mp4"
+                type="video/mp4">
+      </video> 
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            During the Gaussian Splatting optimization process, 
+            the scene's geometry can gradually deteriorate if its structure is not deliberately 
+            preserved, especially in non-textured regions such as walls, ceilings, and furniture surfaces. 
+            This degradation significantly affects the rendering quality of novel views that 
+            deviate significantly from the viewpoints in the training data. 
+          </p>
+          <p>
+            To mitigate this issue, we propose a novel approach called GeoGaussian. 
+            Based on the smoothly connected areas observed from point clouds, 
+            this method introduces a novel pipeline to initialize thin Gaussians aligned with the surfaces, 
+            where the characteristic can be transferred to new generations through a carefully designed densification strategy. 
+            Finally, the pipeline ensures that the scene's geometry and texture are maintained through constrained optimization processes with explicit geometry constraints. 
+            Benefiting from the proposed architecture, the generative ability of 3D Gaussians is enhanced, especially in structured regions.
+            Our proposed pipeline achieves state-of-the-art performance in novel view synthesis and geometric reconstruction, as evaluated qualitatively and quantitatively on public datasets.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{liopenstructure,
+  author = {Li, Yanyan and Lyu, Chenyu and Di, Yan and Zhai, Guangyao and Lee, Gim Hee and Tombari, Federico},
+  title = {GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering},
+  year = {2024},
+  booktitle = {arXiv}}</code></pre>
+  <h2 class="title">Reference</h2>
+  <pre>
+  [3DGS]Kerbl, B., Kopanas, G., Leimkühler, T., & Drettakis, G. (2023). 
+          3D gaussian splatting for real-time radiance field rendering. ACM Transactions on Graphics, 42(4), 1-14.
+  [LightGS]Fan, Z., Wang, K., Wen, K., Zhu, Z., Xu, D. and Wang, Z., (2023). 
+          Lightgaussian: Unbounded 3d gaussian compression with 15x reduction and 200+ fps. arXiv preprint arXiv:2311.17245.</pre>  
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> that kindly open sourced the template of this website. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
