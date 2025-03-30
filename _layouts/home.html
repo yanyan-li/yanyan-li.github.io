@@ -9,54 +9,59 @@ layout: base
 
   {{ content }}
   
-    <div class="news">
-      <h2>News:</h2>
+    <div class="news"><div class="news">
+
+      <!-- Current News Section -->
+      <h3>News:</h3>
+      <ul>
+        
+        <li>
+          Our new arXiv paper: 4D Gaussian Splatting SLAM (<a href="https://arxiv.org/abs/2503.16710">Paper</a>) can be obtained.
+        </li>
+        <li>
+          Our new arXiv paper: Robust Surface Reconstruction (<a href="https://arxiv.org/abs/2503.08093">Paper</a>) can be obtained.
+        </li>    
+        <li>
+          Our New paper: Learnable Infinite Taylor Gaussian for Dynamic View Rendering (<a href="https://arxiv.org/html/2412.04282v2">Paper</a>) is accepted to CVPR2025.
+        </li>
+        <li>
+          Our New paper: Lifelong Localization using Adaptive Submap Joining and Egocentric Factor Graph (<a href="https://arxiv.org/pdf/2409.10172">Paper&Code</a>) is accepted to ICRA2025.
+        </li>
+      </ul>
+    
+      <!-- News of 2024 Section -->
+      <h3>2024:</h3>
       <ul>
         <li>
-        Our New arXiv paper (01.Oct.2024): Robust Gaussian Splatting SLAM by Leveraging
-Loop Closure (<a href="https://arxiv.org/pdf/2409.20111">Paper</a>) can be obtained.
-        </li> 
+          Our new paper, ShapeMaker, is accepted to CVPR2024.
+        </li>
         <li>
-          Our New arXiv paper (16.Sep.2024): LiLoc: Lifelong Localization using Adaptive Submap Joining
-and Egocentric Factor Graph (<a href="https://arxiv.org/pdf/2409.10172">Paper&Code</a>) can be obtained.
-        </li> 
+          Our New arXiv paper (28.Nov.2024): SmileSplat: Generalizable Gaussian Splats for Unconstrained Sparse Images (<a href="https://yanyan-li.github.io/project/gs/smilesplat.html">Project</a>) can be obtained.
+        </li>
+        <li> 
+          Our Paper (27.Nov.2024) got accepted for publication in IEEE TIM:
+          <ul>
+            <li>Accurate Visual Odometry by Leveraging 2DoF Bearing-Only Measurements</li>
+          </ul>
+        </li>
+        <li>
+          Our New arXiv paper (01.Oct.2024): Robust Gaussian Splatting SLAM by Leveraging Loop Closure (<a href="https://arxiv.org/pdf/2409.20111">Paper</a>) can be obtained.
+        </li>
+        
         <li>
           Our new paper, Open-Structure (<a href="https://arxiv.org/pdf/2310.10931.pdf">Paper</a> |
-          <a href="https://github.com/yanyan-li/Open-Structure">Code</a>), is accepted to RA-L2024
+          <a href="https://github.com/yanyan-li/Open-Structure">Code</a>), is accepted to RA-L2024.
         </li>
         <li>
-          Our new paper, GeoGaussian (<a href="project/gs/geogaussian">Project Website</a> ), is accepted to ECCV2024
-           
+          Our new paper, GeoGaussian (<a href="project/gs/geogaussian">Project Website</a>), is accepted to ECCV2024.
         </li>
-        <li>I joined in the CVRP group at NU Singapore as a Postdoc Research Fellow adviced by <a
-            href="https://www.comp.nus.edu.sg/~leegh/">Prof. Gim Hee Lee </a> from June, 2024.
-        </li>
-          <!-- New arXiv paper (03.20.2024): GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering 
-          <ul> <a href="project/gs/geogaussian">Project Website</a> 
-          </ul> -->
         <li>
-          Our new paper, ShapeMaker, is accepted to CVPR2024 
-        <!-- </li>
-          New arXiv paper (11.25.2023): ShapeMaker: Self-Supervised Joint Shape Canonicalization, Segmentation, Retrieval and Deformation
-        </li>  -->
-        <li> Our Paper (10.18.2023) got accepted for publication in IEEE TIM
-          <ul>wMPS-SLAM: An Online and Accurate Monocular Visual-wMPS SLAM System</ul>
+          I joined the CVRP group at NU Singapore as a Postdoc Research Fellow advised by <a href="https://www.comp.nus.edu.sg/~leegh/">Prof. Gim Hee Lee</a> from June, 2024.
         </li>
-<!--         <li>New arXiv paper (10.10.2023): Open-Structure: a Structural Benchmark Dataset for SLAM Algorithms 
-         (<a href="https://arxiv.org/pdf/2310.10931.pdf">Paper</a> |
-          <a href="https://github.com/yanyan-li/Open-Structure">Code</a>)
-        </li> -->
-        <!-- <li>New arXiv paper: Factor Graph Optimization with Covisible and Extensible Connections</li> -->
-        <!-- <li>New arXiv paper: Tracking, Understanding and Mapping in Large-scale Environments</li> -->
-
-        <!-- <li>I worked (11.2023-05.2025) at UTS as a Research Scientist adviced by <a
-            href="https://profiles.uts.edu.au/Liang.Zhao">Robotics Institute Prof. Liang Zhao </a>. -->
-
-        <!-- <li>I worked (11.2023-05.2025) at UTS as a Research Scientist adviced by <a
-            href="https://profiles.uts.edu.au/Liang.Zhao">Robotics Institute Prof. Liang Zhao </a>. -->
-
       </ul>
     </div>
+
+    
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
