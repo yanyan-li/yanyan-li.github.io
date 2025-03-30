@@ -304,8 +304,8 @@ The theme ships with an icon for `rss` and icons of select social-media platform
 - `dribbble`
 - `facebook`
 - `flickr`
-- `github`
 - `google_scholar`
+- `github`
 - `instagram`
 - `keybase`
 - `linkedin`

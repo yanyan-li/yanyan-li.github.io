@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <!-- <meta name="description" -->
         <!-- content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos."> -->
-  <meta name="keywords" content="Gaussian Splatting, eometry-aware Densification, Geo-
-metric Consistency">
+  <meta name="keywords" content="Generalizable Gaussian Splatting, Bundle adjustment">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering</title>
+  <title>SmileSplat: Generalizable Gaussian Splats for Unconstrained Sparse images</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -33,7 +32,7 @@ metric Consistency">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/logo.png">
+  <link rel="icon" href="./static/images/logo_smile.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -89,23 +88,17 @@ metric Consistency">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering</h1>
+          <h1 class="title is-1 publication-title">SmileSplat: Generalizable Gaussian Splats for Unconstrained Sparse Images</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yanyan-li.github.io/">Yanyan Li</a>,</span>
             <span class="author-block">
-              <a href="https://">Chenyu Lyu</a>,</span>
+              <a href="https://">Yixin Fang</a>,</span>
             <span class="author-block">
-              <a href="https://">Yan Di</a>,
+              <a href="https://federicotombari.github.io/">Federico Tombari</a>,
             </span>
             <span class="author-block">
-              <a href="http://">Guangyao Zhai</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://federicotombari.github.io/">Federico Tombari</a>
+              <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a>
             </span>
           </div>
 
@@ -119,7 +112,7 @@ metric Consistency">
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="http://arxiv.org/abs/2403.11324"
+                <a href="https://arxiv.org/pdf/2411.18072"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -129,7 +122,7 @@ metric Consistency">
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/yanyan-li/GeoGaussian"
+                <a href="https://github.com/yanyan-li/SmileSplat"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -158,19 +151,50 @@ metric Consistency">
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <p> &#8611; Rendering of views that have already been seen </p>
-      <video id="teaser_1" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser_training.mp4"
-                type="video/mp4"> 
-      </video>
-       <p> &#8611; Rendering of views that are novel and challenging </p>
-      <video id="teaser_2" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser_challenging_highlight.mp4"
+      <div class="part1-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_595_post_3.mp4"
                 type="video/mp4">
-      </video> 
+      </video>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_35_post_3.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_660_post_3.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_605_post_3.mp4"
+                type="video/mp4">
+      </video>
+      </div>
+      <div class="part2-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_25_post_3.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_355_post_3.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_300_post_3.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/png_250_post_3.mp4"
+                type="video/mp4">
+      </video>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">SmileSplat</span> turns two sparse views to Gaussian radiance fields.
+      </h2>
     </div>
   </div>
 </section>
+
+
 
 
 
@@ -183,20 +207,15 @@ metric Consistency">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            During the Gaussian Splatting optimization process, 
-            the scene's geometry can gradually deteriorate if its structure is not deliberately 
-            preserved, especially in non-textured regions such as walls, ceilings, and furniture surfaces. 
-            This degradation significantly affects the rendering quality of novel views that 
-            deviate significantly from the viewpoints in the training data. 
+            Sparse Multi-view Images can be Learned to predict explicit radiance fields via Generalizable Gaussian Splatting approaches, which can achieve wider application prospects in real-life when ground-truth camera parameters are not required as inputs. 
           </p>
           <p>
-            To mitigate this issue, we propose a novel approach called GeoGaussian. 
-            Based on the smoothly connected areas observed from point clouds, 
-            this method introduces a novel pipeline to initialize thin Gaussians aligned with the surfaces, 
-            where the characteristic can be transferred to new generations through a carefully designed densification strategy. 
-            Finally, the pipeline ensures that the scene's geometry and texture are maintained through constrained optimization processes with explicit geometry constraints. 
-            Benefiting from the proposed architecture, the generative ability of 3D Gaussians is enhanced, especially in structured regions.
-            Our proposed pipeline achieves state-of-the-art performance in novel view synthesis and geometric reconstruction, as evaluated qualitatively and quantitatively on public datasets.
+            In this paper, a novel generalizable
+Gaussian Splatting method, SmileSplat, is proposed to reconstruct pixel-aligned Gaussian surfels for diverse scenarios only requiring unconstrained sparse multi-view images.
+First, Gaussian surfels are predicted based on the multihead Gaussian regression decoder, which can are represented with less degree-of-freedom but have better multiview consistency. Furthermore, the normal vectors of Gaussian surfel are enhanced based on high-quality of normal priors. Second, the Gaussians and camera parameters (both extrinsic and intrinsic) are optimized to obtain
+high-quality Gaussian radiance fields for novel view synthesis tasks based on the proposed Bundle-Adjusting Gaussian Splatting module. Extensive experiments on novel
+view rendering and depth map prediction tasks are conducted on public datasets, demonstrating that the proposed
+method achieves state-of-the-art performance in various 3D vision tasks. 
           </p>
         </div>
       </div>
@@ -209,7 +228,7 @@ metric Consistency">
 
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{liopenstructure,
@@ -225,7 +244,7 @@ metric Consistency">
           Lightgaussian: Unbounded 3d gaussian compression with 15x reduction and 200+ fps. arXiv preprint arXiv:2311.17245.</pre>  
   </div>
 </section>
-
+ -->
 
 <footer class="footer">
   <div class="container">
