@@ -15,7 +15,21 @@ author:
   <!-- ![Alt Text](../img/folder/blah.jpg) -->
   <img width="300px" class="center-block" src="../../../images/dataset_post/live_demo.gif">
   </div>
- *This paper introduces a new benchmark dataset, Open-Structure, for evaluating visual odometry and SLAM methods, which directly equips point and line measurements, correspondences, structural associations, and co-visibility factor graphs instead of providing raw images. Based on the proposed benchmark dataset, these 2D or 3D data can be directly input to different stages of SLAM pipelines to avoid the impact of the data preprocessing modules in ablation experiments.*
+<li> <b>Yanyan Li</b>, Zhao Guo, Ze Yang, Yanbiao Sun, Liang Zhao, Federico Tombari. <span style="color:#B31B1B;font-weight:bold;">@ IEEE RA-L 2024</span> </li>
+<li>
+<span class="link"><a target=_blank href="https://arxiv.org/pdf/2310.10931">[Paper]</a></span>
+<span class="link"><a target=_blank href="https://open-structure.github.io">[Project Page]</a></span>
+<span class="link"><a target=_blank href="https://github.com/yanyan-li/Open-Structure">[Code]</a></span>
+</li>
+
+<div style="clear: both;"></div>
+<h3>Abstract:</h3>
+<div>
+ This paper introduces a new benchmark dataset, Open-Structure, for evaluating visual odometry and SLAM methods, which directly equips point and line measurements, correspondences, structural associations, and co-visibility factor graphs instead of providing raw images. Based on the proposed benchmark dataset, these 2D or 3D data can be directly input to different stages of SLAM pipelines to avoid the impact of the data preprocessing modules in ablation experiments.
+</div>
+
+
+
 
 
 <p align="center">

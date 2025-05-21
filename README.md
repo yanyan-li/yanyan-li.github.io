@@ -19,7 +19,7 @@ gem "minima"
 
 And then execute:
 
-    $ bundle
+    $ bundle exec jekyll serve
 
 
 ## Contents At-A-Glance

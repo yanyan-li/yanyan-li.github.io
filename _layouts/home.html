@@ -13,21 +13,33 @@ layout: base
 
       <!-- Current News Section -->
       <h3>News:</h3>
-      <ul>
-        
-        <li>
-          Our new arXiv paper: 4D Gaussian Splatting SLAM (<a href="https://arxiv.org/abs/2503.16710">Paper</a>) can be obtained.
-        </li>
-        <li>
-          Our new arXiv paper: Robust Surface Reconstruction (<a href="https://arxiv.org/abs/2503.08093">Paper</a>) can be obtained.
-        </li>    
-        <li>
-          Our New paper: Learnable Infinite Taylor Gaussian for Dynamic View Rendering (<a href="https://arxiv.org/html/2412.04282v2">Paper</a>) is accepted to CVPR2025.
-        </li>
-        <li>
-          Our New paper: Lifelong Localization using Adaptive Submap Joining and Egocentric Factor Graph (<a href="https://arxiv.org/pdf/2409.10172">Paper&Code</a>) is accepted to ICRA2025.
-        </li>
-      </ul>
+<ul>
+  <li>
+    Our paper: 
+    SE (3)-Equivariance Learning for Category-level Object Pose Estimation 
+    (<a href="https://ieeexplore.ieee.org/abstract/document/10964769/">Paper</a>) is accepted to <span style="color:#B31B1B;font-weight:bold;">IEEE TIM 2025</span>.
+  </li>
+  <li>
+    Our new <span style="color:#2ECC71;font-weight:bold;">arXiv</span> paper: 
+    4D Gaussian Splatting SLAM 
+    (<a href="https://arxiv.org/abs/2503.16710">Paper</a>) can be obtained.
+  </li>
+  <li>
+    Our new <span style="color:#2ECC71;font-weight:bold;">arXiv</span> paper: 
+    Robust Surface Reconstruction 
+    (<a href="https://arxiv.org/abs/2503.08093">Paper</a>) can be obtained.
+  </li>    
+  <li>
+    Our paper: 
+    Learnable Infinite Taylor Gaussian for Dynamic View Rendering 
+    (<a href="https://arxiv.org/html/2412.04282v2">Paper</a>) is accepted to <span style="color:#B31B1B;font-weight:bold;">CVPR2025</span>.
+  </li>
+  <li>
+    Our paper: 
+    Lifelong Localization using Adaptive Submap Joining and Egocentric Factor Graph 
+    (<a href="https://arxiv.org/pdf/2409.10172">Paper&amp;Code</a>) is accepted to <span style="color:#B31B1B;font-weight:bold;">ICRA2025</span>.
+  </li>
+</ul>
     
       <!-- News of 2024 Section -->
       <h3>2024:</h3>
@@ -69,9 +81,10 @@ layout: base
     {% assign posts = site.posts %}
   {% endif %}
 
-  <div class="Publications">
-    <h2> Papers:</h2>
-
+  <div class="section-heading">
+    <h2> Selected Publications (<a href="https://scholar.google.com/citations?user=phzz5xcAAAAJ&hl=en"> Google Scholar</a>):</h2>
+    <b>*Equal contribution †Corresponding author</b>
+    
     {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
       <h4 class="post-list-heading">{{ page.list_title }}</h4>

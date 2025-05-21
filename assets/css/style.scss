@@ -5,3 +5,38 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+.publication-table,
+.publication-table th,
+.publication-table td {
+  border: none !important;
+  border-collapse: collapse;
+}
+
+.publication-table td {
+  padding: 0;        /* if you want to kill any default cell padding */
+}
+
+.publication-table {
+  width: 100%;
+}
+
+img.publication-image {
+  width: 140px;
+  height: 140px;
+  //align: center;
+}
+
+td.image-column {
+  width: 160px;
+  height: 100px;
+padding-left: 50px;
+}
+
+.section-heading {
+  /* draw a solid line */
+  border-bottom: 2px solid #007ACC;
+  /* give some breathing room */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}

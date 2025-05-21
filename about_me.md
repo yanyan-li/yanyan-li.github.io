@@ -24,9 +24,9 @@ social: true  # includes social icons at the bottom of the page
   <!-- ![Alt Text](../img/folder/blah.jpg) -->
   <img height="200px" class="center-block" src="../images/yanyan.png">
   </div>
-I'm a Ph.D. student focusing on camera pose estimation, mapping, and scene understanding at Technical University of München. 
+I obtainted my Ph.D. at Technical Univeristy of Munich, focusing on camera pose estimation, mapping and rendering 
 
-My future research interests are SLAM for different sensors, NeRF-SLAM and reinforcement learning.  
+My research interests are tracking, reconstruction, view rendering, and scene understanding in 4D open scenes.  
 
 
 
@@ -47,6 +47,6 @@ My future research interests are SLAM for different sensors, NeRF-SLAM and reinf
 
 ### Service
 
-**Conference Reviewer:** ICRA, 3DV, IROS
+**Conference Reviewer:** ICRA, 3DV, IROS, CVPR, BMVC
 
-**Journal Reviewer:** IEEE RA-L, T-RO
+**Journal Reviewer:** T-RO, T-MM, TIP, RA-L(Senior Reviewer)
