@@ -173,14 +173,12 @@ metric Consistency">
 </section>
 
 
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
             During the Gaussian Splatting optimization process, 
@@ -188,8 +186,8 @@ metric Consistency">
             preserved, especially in non-textured regions such as walls, ceilings, and furniture surfaces. 
             This degradation significantly affects the rendering quality of novel views that 
             deviate significantly from the viewpoints in the training data. 
-          </p>
-          <p>
+           </p>
+           <p>
             To mitigate this issue, we propose a novel approach called GeoGaussian. 
             Based on the smoothly connected areas observed from point clouds, 
             this method introduces a novel pipeline to initialize thin Gaussians aligned with the surfaces, 
@@ -201,9 +199,33 @@ metric Consistency">
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+
+    <div class="container is-max-desktop">
+      <!-- Concurrent Work -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Poster of GeoGaussian</h2>
+          <div class="content has-text-justified">
+            <iframe 
+  src="static/images/poster_cvpr15_CAM.pdf#toolbar=0" 
+  width="100%" 
+  height="535px" 
+  style="border: none;">
+</iframe>
+            <!-- <iframe src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500px" frameborder="0"></iframe> -->
+            <!-- <embed src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500" type="application/pdf"> -->
+            <!-- <p><strong>Overall Framework of Taylor Gaussian</strong>. The detailed architecture of the proposed method. The framework includes Gaussian Initialization, Sparse Point Sampling, Gaussian Point Interpolation, and Gaussian Transformation Fields Modeling.</p> -->
+          </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work -->
+    </div>
+  </div>
   </div>
 </section>
+
+
+
 
 
 
