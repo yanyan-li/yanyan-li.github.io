@@ -74,7 +74,7 @@
               <span class="author-block">
                 <a href=""> Feng Xu</a>,</span>
               <span class="author-block">
-                <a href="">Chau Yuen</a></span>
+                <a href="">Chau Yuen</a>,</span>
                <span class="author-block">
                 <a href="">Yanyan Li</a></span>  
           </div>
@@ -136,20 +136,20 @@
         
           <div class="item item-cut_roasted_beef-ours">
             <video poster="" id="cut_roasted_beef" autoplay controls muted loop playsinline style="width: 100%; max-height: 600px;">
-              <source src="static/videos/demo_bonn.mp4"
+              <source src="static/images/loopclsorue_1.mp4"
                       type="video/mp4">
             </video>
           </div>
 
           <div class="item item-flame_steak-ours">
             <video poster="" id="flame_steak" autoplay controls muted loop playsinline style="width: 100%; max-height: 600px;">
-              <source src="static/videos/demo_bonn1.mp4"
+              <source src="static/images/loopclsorue_2.mp4"
                       type="video/mp4">
             </video>
           </div>
           <div class="item item-sear_steak-ours">
             <video poster="" id="sear_steak" autoplay controls muted loop playsinline style="width: 100%; max-height: 600px;">
-              <source src="static/videos/demo_tum1.mp4"
+              <source src="static/images/loopclsorue_2.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -200,18 +200,21 @@ Furthermore, a loop closure optimization approach is proposed to remove camera p
         <!-- Concurrent Work -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3">Architecture of the System</h2>
-            <div class="content has-text-justified">
-              <iframe 
-    src="static/images/loop_archi.pdf#toolbar=0" 
-    width="100%" 
-    height="400px" 
-    style="border: none;">
-  </iframe>
-              <!-- <iframe src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500px" frameborder="0"></iframe> -->
-              <!-- <embed src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500" type="application/pdf"> -->
-              <!-- <p><strong>Overall Framework of Taylor Gaussian</strong>. The detailed architecture of the proposed method. The framework includes Gaussian Initialization, Sparse Point Sampling, Gaussian Point Interpolation, and Gaussian Transformation Fields Modeling.</p> -->
+            <!-- <h2 class="title is-3">Architecture of the System</h2> -->
+            <div class="item item-loop-closure-demo">
+              <img src="static/images/loopclosure_architure.gif" 
+                  alt="Loop Closure Architecture Demo" 
+                  style="width: 100%; max-height: 600px;" loading="lazy">
             </div>
+            <!-- <div class="content has-text-justified">
+              <iframe 
+                src="static/images/loop_archi.pdf#toolbar=0" 
+                width="100%" 
+                height="400px" 
+                style="border: none;">
+              </iframe>
+              
+            </div> -->
           </div>
         </div>
         <!--/ Concurrent Work -->
@@ -374,7 +377,7 @@ Furthermore, a loop closure optimization approach is proposed to remove camera p
         <div class="has-text-centered">
           <!-- TODO replace the place holder video with the correct video and delete the plaveholder video from folder -->
           <video controls>
-            <source src="static/videos/demo_tum.mp4" type="video/mp4">
+            <source src="static/images/loopclosure_video.mp4" type="video/mp4">
             <!-- <source src="static/videos/InstantSplat.mp4" type="video/mp4"> -->
             Your browser does not support the video.
           </video>
@@ -384,71 +387,17 @@ Furthermore, a loop closure optimization approach is proposed to remove camera p
     </div>
   </section>
 
-  <script>
-    new BeforeAfter({
-      id: '#example1'
-    });
-    new BeforeAfter({
-      id: '#example2'
-    });
-    new BeforeAfter({
-      id: '#example3'
-    });
-    new BeforeAfter({
-      id: '#example4'
-    });
-    new BeforeAfter({
-      id: '#example5'
-    });
-    new BeforeAfter({
-      id: '#example6'
-    });
-    new BeforeAfter({
-      id: '#example7'
-    });
-    new BeforeAfter({
-      id: '#example8'
-    });
-    new BeforeAfter({
-      id: '#example9'
-    });
-    new BeforeAfter({
-      id: '#example10'
-    });
 
-  </script>
-
-  <!-- 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            Needs update
-          </p>
-         
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section> -->
 
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{li20254dgaussiansplattingslam,
-  title={4D Gaussian Splatting SLAM}, 
-  author={Yanyan Li and Youxu Fang and Zunjie Zhu and Kunyi Li and Yong Ding and Federico Tombari},
-  year={2025},
-  eprint={2503.16710},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2503.16710}, 
+      <pre><code>@misc{zhu2024robust,
+  title={Robust Gaussian Splatting SLAM by Leveraging Loop Closure},
+  author={Zhu, Zunjie and Fang, Youxu and Li, Xin and Yan, Chengang and Xu, Feng and Yuen, Chau and Li, Yanyan},
+  journal={arXiv preprint arXiv:2409.20111},
+  year={2024} 
 }</code></pre>
     </div>
   </section>

@@ -1,0 +1,32 @@
+---
+layout: post
+title: "4D Gaussian Splatting SLAM"
+# categories: junk
+author:
+- Y Di 
+- C Zhang
+- C Wang
+- R Zhang
+- G Zhai
+- Y Li
+- B Fu
+- X Ji 
+- S Gao
+meta: "Springfield"
+---
+<div style="float:left;margin:0 10px 10px 0" class="col-md-4" markdown="1">
+  <!-- ![Alt Text](../img/folder/blah.jpg) -->
+  <img width="300px" class="center-block" src="../../../images/4DGSSLAM.gif">
+  </div>
+<li> <b>Yanyan Li</b>, Youxu Fang, Zunjie Zhu, Kunyi Li, Yong Ding, Federico Tombari. <span style="color:#2ECC71;font-weight:bold;">@ arXiv 2025</span> </li>
+<li>
+<span class="link"><a target=_blank href="https://arxiv.org/pdf/2503.16710">[Paper]</a></span>
+<span class="link"><a target=_blank href="https://yanyan-li.github.io/project/gs/4dgsslam.html">[Project Page]</a></span>
+<span class="link"><a target=_blank href="https://github.com/yanyan-li/4DGS-SLAM">[Code Coming Soon]</a></span>
+</li>
+<div style="clear: both;"></div>
+
+<h3>Abstract:</h3>
+<div>
+Instead of removing dynamic objects as distractors and reconstructing only static environments, this paper proposes an efficient architecture that incrementally tracks camera poses and establishes the 4D Gaussian radiance fields in unknown scenarios by using a sequence of RGB-D images. First, by generating motion masks, we obtain static and dynamic priors for each pixel. To eliminate the influence of static scenes and improve the efficiency on learning the motion of dynamic objects, we classify the Gaussian primitives into static and dynamic Gaussian sets, while the sparse control points along with an MLP is utilized to model the transformation fields of the dynamic Gaussians. To more accurately learn the motion of dynamic Gaussians, a novel 2D optical flow map reconstruction algorithm is designed to render optical flows of dynamic objects between neighbor images, which are further used to supervise the 4D Gaussian radiance fields along with traditional photometric and geometric constraints.
+</div>
