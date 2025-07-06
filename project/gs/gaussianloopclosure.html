@@ -188,7 +188,9 @@
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              Instead of removing dynamic objects as distractors and reconstructing only static environments, this paper proposes an efficient architecture that incrementally tracks camera poses and establishes the 4D Gaussian radiance fields in unknown scenarios by using a sequence of RGB-D images. First, by generating motion masks, we obtain static and dynamic priors for each pixel. To eliminate the influence of static scenes and improve the efficiency on learning the motion of dynamic objects, we classify the Gaussian primitives into static and dynamic Gaussian sets, while the sparse control points along with an MLP is utilized to model the transformation fields of the dynamic Gaussians. To more accurately learn the motion of dynamic Gaussians, a novel 2D optical flow map reconstruction algorithm is designed to render optical flows of dynamic objects between neighbor images, which are further used to supervise the 4D Gaussian radiance fields along with traditional photometric and geometric constraints.
+              In this paper, we propose a robust Gaussian Splatting SLAM architecture that utilizes inputs from rotating multiple RGB-D cameras to achieve accurate localization and photorealistic rendering performance. The carefully designed Gaussian Splatting Loop Closure module effectively addresses the issue of accumulated tracking and mapping errors found in conventional Gaussian Splatting SLAM systems. 
+First, each Gaussian is associated with an anchor frame and categorized as historical or novel based on its timestamp. By rendering different types of Gaussians at the same viewpoint, the proposed loop detection strategy considers both co-visibility relationships and distinct rendering outcomes.
+Furthermore, a loop closure optimization approach is proposed to remove camera pose drift and maintain the high quality of 3D Gaussian models. The approach uses a lightweight pose graph optimization algorithm to correct pose drift and updates Gaussians based on the optimized poses. Additionally, a bundle adjustment scheme further refines camera poses using photometric and geometric constraints, ultimately enhancing the global consistency of scenarios.
             </p>
           </div>
         </div>
@@ -203,7 +205,7 @@
               <iframe 
     src="static/images/loop_archi.pdf#toolbar=0" 
     width="100%" 
-    height="535px" 
+    height="400px" 
     style="border: none;">
   </iframe>
               <!-- <iframe src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500px" frameborder="0"></iframe> -->
