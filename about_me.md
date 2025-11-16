@@ -50,6 +50,8 @@ My research interests are tracking, reconstruction, view rendering, and scene un
 
 ### Service
 
-**Conference Reviewer:** ICRA, 3DV, IROS, CVPR, BMVC
+**Conference Reviewer:** ICRA, 3DV, IROS, CVPR, BMVC, AAAI
 
-**Journal Reviewer:** T-RO, T-PAMI, T-MM, TIP, RA-L(Senior Reviewer)
+**Journal Reviewer:** T-RO, T-PAMI, T-MM, TIP
+
+**Associate Editor:** RA-L

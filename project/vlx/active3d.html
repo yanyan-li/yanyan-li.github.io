@@ -60,20 +60,14 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title"><span
-                style="color: #4c74af ;font-weight: bolder;"> 4D Gaussian Splatting SLAM</h1>
+                style="color: #4c74af ;font-weight: bolder;"> Active3D: Active High-Fidelity 3D Reconstruction via Hierarchical Uncertainty Quantification</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="">Yanyan Li</a>,</span>
+                <a href="">Yan Li</a>,</span>
               <span class="author-block">                
-                <a href="">Youxu Fang</a> ,</span>
+                <a href="">Yingzhao Li</a> ,</span>
               <span class="author-block">
-                <a href="">Zunjie Zhu</a> ,</span>
-              <span class="author-block">
-                <a href="">Kunyi Li</a> ,</span>
-              <span class="author-block">
-                <a href=""> Yong Ding</a>,</span>
-              <span class="author-block">
-                <a href="">Federico Tombari</a></span>
+                <a href="">Gim Hee Lee</a></span>
           </div>
 
           <!-- affiliations -->
@@ -88,12 +82,12 @@
               </a>
               </span>
               <span class="link-block">
-              <a href="https://arxiv.org/pdf/2503.16710"
+              <a href=""
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="ai ai-arxiv"></i>
                 </span>
-                <span>arXiv</span>
+                <span>arXiv (Coming Soon)</span>
               </a>
             </span>
               <!-- Video Link. -->
@@ -112,7 +106,7 @@
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                 </a>
               </span>
             </div>
@@ -126,7 +120,7 @@
   </section>
 
 
-  <section class="hero is-light is-small">
+  <!-- <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
         <div id="results-carousel" class=" carousel results-carousel">        
@@ -153,9 +147,9 @@
           <div style="height: 20px;"></div>
       </div>
     </div>
-</div>
-</section>
-    
+  </div>
+  </section> -->
+        
 
   <script>
     new BeforeAfter({
@@ -185,8 +179,25 @@
           <h2 class="title is-3">Overview</h2>
           <div class="content has-text-justified">
             <p>
-              Instead of removing dynamic objects as distractors and reconstructing only static environments, this paper proposes an efficient architecture that incrementally tracks camera poses and establishes the 4D Gaussian radiance fields in unknown scenarios by using a sequence of RGB-D images. First, by generating motion masks, we obtain static and dynamic priors for each pixel. To eliminate the influence of static scenes and improve the efficiency on learning the motion of dynamic objects, we classify the Gaussian primitives into static and dynamic Gaussian sets, while the sparse control points along with an MLP is utilized to model the transformation fields of the dynamic Gaussians. To more accurately learn the motion of dynamic Gaussians, a novel 2D optical flow map reconstruction algorithm is designed to render optical flows of dynamic objects between neighbor images, which are further used to supervise the 4D Gaussian radiance fields along with traditional photometric and geometric constraints.
-            </p>
+                We present an active exploration framework
+                for high-fidelity 3D reconstruction that incrementally builds
+                a multi-level uncertainty space and selects next-best-views
+                through an uncertainty-driven motion planner. We introduce a
+                hybrid implicit-explicit representation that fuses neural fields
+                with Gaussian primitives to jointly capture global structural
+                priors and locally observed details. Based on this hybrid state,
+                we derive a hierarchical uncertainty volume that quantifies
+                both implicit global structure quality and explicit local sur-
+                face confidence. To focus optimization on the most infor-
+                mative regions, we propose an uncertainty-driven keyframe
+                selection strategy that anchors high-entropy viewpoints as
+                sparse attention nodes, coupled with a viewpoint-space slid-
+                ing window for uncertainty-aware local refinement. The plan-
+                ning module formulates next-best-view selection as an Ex-
+                pected Hybrid Information Gain problem and incorporates
+                a risk-sensitive path planner to ensure efficient and safe ex-
+                ploration.             
+             </p>
           </div>
         </div>
       </div>
@@ -196,21 +207,22 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-full-width">
             <h2 class="title is-3">Architecture of the System</h2>
-            <div class="content has-text-justified">
+            
+
+            <div class="content has-text-centered">
               <iframe 
-    src="static/images/4DGS_SLAM_archi.pdf#toolbar=0" 
-    width="100%" 
-    height="535px" 
-    style="border: none;">
-  </iframe>
-              <!-- <iframe src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500px" frameborder="0"></iframe> -->
-              <!-- <embed src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500" type="application/pdf"> -->
-              <!-- <p><strong>Overall Framework of Taylor Gaussian</strong>. The detailed architecture of the proposed method. The framework includes Gaussian Initialization, Sparse Point Sampling, Gaussian Point Interpolation, and Gaussian Transformation Fields Modeling.</p> -->
+                src="static/images/framework.pdf#toolbar=0" 
+                width="70%" 
+                height="300px" 
+                style="border: none;">
+              </iframe>
             </div>
+
           </div>
         </div>
         <!--/ Concurrent Work -->
       </div>
+
     </div>
     </div>
   </section>
@@ -219,165 +231,7 @@
 
  
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">More Qualitative Results of 4DGS-SLAM</h2>
-         
-  <!-- <section class="section">
-    <div class="container is-max-desktop ">
-      <div class=" has-text-centered">
-        <h2 class="title is-3">Visual Comparisons</h2> -->
-        <div class="content has-text-justified">
-          <p>
-
-          </p>
-        </div>
-        <div class="columns is-centered">
-          <!-- Visual Effects. -->
-          <div class="column">
-            <div class="content">
-              <div class="columns is-centered">
-                <div class="column is-full-width">
-
-                  <div id="example1" class="bal-container-small">
-
-                    <div class="bal-after">
-                      <img src="static/images/ballon_render.png">
-                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                        Rendered Image
-                      </div>
-                    </div>
-
-                    <div class="bal-before" style="width:96.4968152866242%;">
-                      <div class="bal-before-inset" style="width: 512px;">
-                        <img src="static/images/person_render.png">
-                        <div class="bal-beforePosition beforeLabel">
-                          Rendered Image
-                        </div>
-                      </div>
-                    </div>
-
-                    
-
-                    <div class="bal-handle" style="left:96.4968152866242%;">
-                      <span class=" handle-left-arrow"></span>
-                      <span class="handle-right-arrow"></span>
-                    </div>
-
-                  </div>
-
-                  <div id="example2" class="bal-container-small">
-
-                    <div class="bal-after">
-                      <img src="static/images/sit_xyz_render.png">
-                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                        Rendered Image
-                      </div>
-                    </div>
-
-                    <div class="bal-before" style="width:96.4968152866242%;">
-                      <div class="bal-before-inset" style="width: 512px;">
-                        <img src="static/images/sit_static_render.png">
-                        <div class="bal-beforePosition beforeLabel">
-                          Rendered Image
-                        </div>
-                      </div>
-                    </div>
-
-                   
-
-                    <div class="bal-handle" style="left:96.4968152866242%;">
-                      <span class=" handle-left-arrow"></span>
-                      <span class="handle-right-arrow"></span>
-                    </div>
-
-                  </div>
-              
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!--/ Visual Effects. -->
-
-          <!-- Matting. -->
-          <div class="column">
-            <div class="columns is-centered">
-              <div class="column content">
-
-                <div id="example4" class="bal-container-small">
-                    <div class="bal-after">
-                      <img src="static/images/ballon_gs.png">
-                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                       Gaussians
-                      </div>
-                    </div>
-
-                    <div class="bal-before" style="width:62.10191082802548%;">
-                      <div class="bal-before-inset" style="width: 512px;">
-                        <img src="static/images/person_gs.png">
-                        <div class="bal-beforePosition beforeLabel">
-                          Gaussians
-                        </div>
-                      </div>
-                    </div>
-
-
-                  <div class="bal-handle" style="left:62.10191082802548%;">
-                    <span class=" handle-left-arrow"></span>
-                    <span class="handle-right-arrow"></span>
-                  </div>
-
-                </div>
-
-                <div id="example5" class="bal-container-small">
-                  <div class="bal-after">
-                    <img src="static/images/sit_xyz_gs.png">
-                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                      Gaussians
-                    </div>
-                  </div>
-
-                  
-                  <div class="bal-before" style="width:96.4968152866242%;">
-                    <div class="bal-before-inset" style="width: 512px;">
-                      <img src="static/images/sit_static_gs.png">
-                      <div class="bal-beforePosition beforeLabel">
-                        Gaussians
-                    </div>
-                  </div>
-                </div>
-
-                  <div class="bal-handle" style="left:62.10191082802548%;">
-                    <span class=" handle-left-arrow"></span>
-                    <span class="handle-right-arrow"></span>
-                  </div>
-
-                </div>
-				
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="column is-four-fifths"></div>
-        <div class="has-text-centered">
-          <!-- TODO replace the place holder video with the correct video and delete the plaveholder video from folder -->
-          <video controls>
-            <source src="static/videos/demo_tum.mp4" type="video/mp4">
-            <!-- <source src="static/videos/InstantSplat.mp4" type="video/mp4"> -->
-            Your browser does not support the video.
-          </video>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  
 
   <script>
     new BeforeAfter({
@@ -413,37 +267,18 @@
 
   </script>
 
-  <!-- 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            Needs update
-          </p>
-         
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section> -->
 
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{li20254dgaussiansplattingslam,
-  title={4D Gaussian Splatting SLAM}, 
-  author={Yanyan Li and Youxu Fang and Zunjie Zhu and Kunyi Li and Yong Ding and Federico Tombari},
+      <pre><code>@misc{li2025active3d,
+  title={Active3D: Active High-Fidelity 3D Reconstruction via Hierarchical Uncertainty Quantification}, 
+  author={Yan Li and Yingzhao and Gim Hee Lee},
   year={2025},
   eprint={2503.16710},
   archivePrefix={arXiv},
   primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2503.16710}, 
 }</code></pre>
     </div>
   </section>
