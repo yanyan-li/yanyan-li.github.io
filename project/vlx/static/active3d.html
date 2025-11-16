@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-55V1E709SK');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description"
+    content="4dgs ">
+  <meta name="keywords" content="Instantsplat, Gaussian Splatting, Gaussian, LightGaussian">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4D Gaussian Splatting SLAM</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/xxxxx"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span
+                style="color: #4c74af ;font-weight: bolder;"> 4D Gaussian Splatting SLAM</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Yanyan Li</a>,</span>
+              <span class="author-block">                
+                <a href="">Youxu Fang</a> ,</span>
+              <span class="author-block">
+                <a href="">Zunjie Zhu</a> ,</span>
+              <span class="author-block">
+                <a href="">Kunyi Li</a> ,</span>
+              <span class="author-block">
+                <a href=""> Yong Ding</a>,</span>
+              <span class="author-block">
+                <a href="">Federico Tombari</a></span>
+          </div>
+
+          <!-- affiliations -->
+         
+
+<!-- TODO: update paper and video link once upload -->
+          <div class="column has-text-centered">
+            <!-- <div class="publication-links"> -->
+              <!-- PDF Link. -->
+              <span class="link-block">
+            
+              </a>
+              </span>
+              <span class="link-block">
+              <a href="https://arxiv.org/pdf/2503.16710"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://......" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yanyan-li/4DGS-SLAM"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class=" carousel results-carousel">        
+        
+          <div class="item item-cut_roasted_beef-ours">
+            <video poster="" id="cut_roasted_beef" autoplay controls muted loop playsinline style="width: 100%; max-height: 600px;">
+              <source src="static/videos/demo_bonn.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+          <div class="item item-flame_steak-ours">
+            <video poster="" id="flame_steak" autoplay controls muted loop playsinline style="width: 100%; max-height: 600px;">
+              <source src="static/videos/demo_bonn1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-sear_steak-ours">
+            <video poster="" id="sear_steak" autoplay controls muted loop playsinline style="width: 100%; max-height: 600px;">
+              <source src="static/videos/demo_tum1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div style="height: 20px;"></div>
+      </div>
+    </div>
+</div>
+</section>
+    
+
+  <script>
+    new BeforeAfter({
+      class:"item item-cut_roasted_beef-ours"
+    });
+    new BeforeAfter({
+      class:"item item-flame_steak-ours"
+    });
+    new BeforeAfter({
+      class:"item item-sear_steak-ours"
+    });
+    new BeforeAfter({
+      class:"item item-coffee_martini-ours"
+    });
+    new BeforeAfter({
+      class:"item item-flame_salmon-ours"
+    });
+  </script>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              Instead of removing dynamic objects as distractors and reconstructing only static environments, this paper proposes an efficient architecture that incrementally tracks camera poses and establishes the 4D Gaussian radiance fields in unknown scenarios by using a sequence of RGB-D images. First, by generating motion masks, we obtain static and dynamic priors for each pixel. To eliminate the influence of static scenes and improve the efficiency on learning the motion of dynamic objects, we classify the Gaussian primitives into static and dynamic Gaussian sets, while the sparse control points along with an MLP is utilized to model the transformation fields of the dynamic Gaussians. To more accurately learn the motion of dynamic Gaussians, a novel 2D optical flow map reconstruction algorithm is designed to render optical flows of dynamic objects between neighbor images, which are further used to supervise the 4D Gaussian radiance fields along with traditional photometric and geometric constraints.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <!-- Concurrent Work -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Architecture of the System</h2>
+            <div class="content has-text-justified">
+              <iframe 
+    src="static/images/4DGS_SLAM_archi.pdf#toolbar=0" 
+    width="100%" 
+    height="535px" 
+    style="border: none;">
+  </iframe>
+              <!-- <iframe src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500px" frameborder="0"></iframe> -->
+              <!-- <embed src="static/images/4DGS_SLAM_archi.pdf" width="100%" height="500" type="application/pdf"> -->
+              <!-- <p><strong>Overall Framework of Taylor Gaussian</strong>. The detailed architecture of the proposed method. The framework includes Gaussian Initialization, Sparse Point Sampling, Gaussian Point Interpolation, and Gaussian Transformation Fields Modeling.</p> -->
+            </div>
+          </div>
+        </div>
+        <!--/ Concurrent Work -->
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+ 
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">More Qualitative Results of 4DGS-SLAM</h2>
+         
+  <!-- <section class="section">
+    <div class="container is-max-desktop ">
+      <div class=" has-text-centered">
+        <h2 class="title is-3">Visual Comparisons</h2> -->
+        <div class="content has-text-justified">
+          <p>
+
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <!-- Visual Effects. -->
+          <div class="column">
+            <div class="content">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+
+                  <div id="example1" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="static/images/ballon_render.png">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                        Rendered Image
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:96.4968152866242%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="static/images/person_render.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          Rendered Image
+                        </div>
+                      </div>
+                    </div>
+
+                    
+
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+
+                  <div id="example2" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="static/images/sit_xyz_render.png">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                        Rendered Image
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:96.4968152866242%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="static/images/sit_static_render.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          Rendered Image
+                        </div>
+                      </div>
+                    </div>
+
+                   
+
+                    <div class="bal-handle" style="left:96.4968152866242%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+              
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!--/ Visual Effects. -->
+
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+
+                <div id="example4" class="bal-container-small">
+                    <div class="bal-after">
+                      <img src="static/images/ballon_gs.png">
+                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                       Gaussians
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width:62.10191082802548%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="static/images/person_gs.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          Gaussians
+                        </div>
+                      </div>
+                    </div>
+
+
+                  <div class="bal-handle" style="left:62.10191082802548%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+
+                <div id="example5" class="bal-container-small">
+                  <div class="bal-after">
+                    <img src="static/images/sit_xyz_gs.png">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      Gaussians
+                    </div>
+                  </div>
+
+                  
+                  <div class="bal-before" style="width:96.4968152866242%;">
+                    <div class="bal-before-inset" style="width: 512px;">
+                      <img src="static/images/sit_static_gs.png">
+                      <div class="bal-beforePosition beforeLabel">
+                        Gaussians
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="bal-handle" style="left:62.10191082802548%;">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+				
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column is-four-fifths"></div>
+        <div class="has-text-centered">
+          <!-- TODO replace the place holder video with the correct video and delete the plaveholder video from folder -->
+          <video controls>
+            <source src="static/videos/demo_tum.mp4" type="video/mp4">
+            <!-- <source src="static/videos/InstantSplat.mp4" type="video/mp4"> -->
+            Your browser does not support the video.
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    new BeforeAfter({
+      id: '#example1'
+    });
+    new BeforeAfter({
+      id: '#example2'
+    });
+    new BeforeAfter({
+      id: '#example3'
+    });
+    new BeforeAfter({
+      id: '#example4'
+    });
+    new BeforeAfter({
+      id: '#example5'
+    });
+    new BeforeAfter({
+      id: '#example6'
+    });
+    new BeforeAfter({
+      id: '#example7'
+    });
+    new BeforeAfter({
+      id: '#example8'
+    });
+    new BeforeAfter({
+      id: '#example9'
+    });
+    new BeforeAfter({
+      id: '#example10'
+    });
+
+  </script>
+
+  <!-- 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Needs update
+          </p>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{li20254dgaussiansplattingslam,
+  title={4D Gaussian Splatting SLAM}, 
+  author={Yanyan Li and Youxu Fang and Zunjie Zhu and Kunyi Li and Yong Ding and Federico Tombari},
+  year={2025},
+  eprint={2503.16710},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2503.16710}, 
+}</code></pre>
+    </div>
+  </section>
+  
+
+  <!-- TODO: update the arxiv link and github -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <!-- <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i> -->
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We thank the authors of
+              We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the
+              template of this website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
