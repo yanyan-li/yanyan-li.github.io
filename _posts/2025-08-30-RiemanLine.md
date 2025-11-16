@@ -15,7 +15,7 @@ meta: "Springfield"
   <!-- ![Alt Text](../img/folder/blah.jpg) -->
   <img width="300px" class="center-block" src="../../../images/ReimanLine.gif">
   </div>
-<li> <b>Yanyan Li</b>, Ze Yang, Keisuke Tateno, Federico Tombari, Liang Zhao, Gim Hee Lee. <span style="color:#B31B1B;font-weight:bold;">@ AAAI 2026</span> </li>
+<li> <b>Yanyan Li</b>, Ze Yang, Keisuke Tateno, Federico Tombari, Liang Zhao, Gim Hee Lee. <span style="color:#B31B1B;font-weight:bold;">@ AAAI 2026 (Oral)</span> </li>
 <li>
 <span class="link"><a target=_blank href="https://arxiv.org/pdf/2508.04335">[Paper]</a></span>
 <span class="link"><a target=_blank href="https://github.com/yanyan-li/RiemanLine">[Code]</a></span>
