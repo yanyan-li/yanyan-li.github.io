@@ -29,10 +29,9 @@ I obtainted my Ph.D. at Technical Univeristy of Munich, focusing on camera pose 
 My research interests are tracking, reconstruction, view rendering, and scene understanding in 4D open scenes.  
 
 Hi all,
-For future publications, please use my updated legal name Yan Li.
+For future publications, please use my updated legal name **Yan Li**.
 My previous papers under Yanyan Li refer to the same person.
-Just letting you know to avoid confusion in upcoming submissions.
-Thanks!
+
 
 <br />
 
