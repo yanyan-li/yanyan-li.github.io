@@ -49,6 +49,24 @@
   <script src="./static/js/index.js"></script>
   <script src="./static/js/script.js"></script>
 
+  <!-- 这里插入 -->
+  <style>
+    .video-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: nowrap;
+    }
+    .video-row video {
+      width: 23%;
+      height: auto;
+      border-radius: 6px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -78,18 +96,15 @@
             <!-- <div class="publication-links"> -->
               <!-- PDF Link. -->
               <span class="link-block">
-            
-              </a>
-              </span>
-              <span class="link-block">
-              <a href=""
+              <a href="https://arxiv.org/abs/2511.20050"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="ai ai-arxiv"></i>
                 </span>
-                <span>arXiv (Coming Soon)</span>
+                <span>arXiv</span>
               </a>
             </span>
+            
               <!-- Video Link. -->
               <!-- <span class="link-block">
                 <a href="https://......" class="external-link button is-normal is-rounded is-dark">
@@ -119,6 +134,51 @@
     </div>
   </section>
 
+  
+  
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="video-row">
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/replica_0.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/replica_1.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/replica_2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/replica_3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption has-text-centered">
+            Actively high-fidelity reconstruction on Replica sequences.
+        </p>
+     
+
+        <div class="video-row">
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/mp3d_0.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/mp3d_1.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/mp3d_2.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline>
+            <source src="./static/images/mp3d_3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="caption has-text-centered">
+          Actively high-fidelity reconstructing in MP3D sequences. 
+        </P>
+    </div>
+  </div>
+</section>
 
   <!-- <section class="hero is-light is-small">
     <div class="hero-body">
