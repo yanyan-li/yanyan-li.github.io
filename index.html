@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yan Li</title>
+  <meta name="description" content="Yan Li - Research Fellow at NUS, Incoming Assistant Professor at HKUST(GZ). Research in Robotics, Spatial AI, SLAM, and 3D/4D Gaussian Splatting." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --soft:#f8fafc;
+      --accent:#8c1515;
+      --accent-soft:#fef2f2;
+      --link:#8c1515;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--max); margin:0 auto; padding:0 24px}
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:18px 0;
+      gap:20px;
+    }
+    .brand h1{
+      margin:0; font-size:1.25rem; font-weight:650; letter-spacing:-0.02em;
+    }
+    .brand p{
+      margin:2px 0 0; color:var(--muted); font-size:.95rem;
+    }
+    nav{
+      display:flex; flex-wrap:wrap; gap:20px;
+      font-size:.96rem;
+    }
+    nav a{color:#374151}
+    .hero{
+      border-bottom:1px solid var(--line);
+      padding:64px 0 56px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.45fr .8fr;
+      gap:48px;
+      align-items:start;
+    }
+    .pill{
+      display:inline-block;
+      background:var(--accent-soft);
+      color:var(--accent);
+      border:1px solid #fecaca;
+      border-radius:999px;
+      padding:7px 14px;
+      font-size:.93rem;
+      margin-bottom:18px;
+    }
+    .hero h2{
+      margin:0;
+      font-size:3.4rem;
+      line-height:1.04;
+      letter-spacing:-0.04em;
+      font-weight:720;
+    }
+    .subtitle{
+      margin-top:14px;
+      font-size:1.35rem;
+      color:#374151;
+    }
+    .lead{
+      margin-top:26px;
+      font-size:1.08rem;
+      color:#4b5563;
+      max-width:760px;
+    }
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:28px;
+    }
+    .btn{
+      display:inline-block;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:11px 16px;
+      font-weight:600;
+      color:#374151;
+      background:#fff;
+    }
+    .btn.primary{
+      background:var(--text);
+      color:#fff;
+      border-color:var(--text);
+    }
+    .side-card, .card{
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:#fff;
+    }
+    .side-card{
+      padding:24px;
+      background:var(--soft);
+    }
+    .photo{
+      width:100%;
+      aspect-ratio: 4 / 5;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#9ca3af;
+      font-size:.95rem;
+      overflow:hidden;
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .side-card h3{
+      margin:18px 0 10px;
+      font-size:1.4rem;
+      letter-spacing:-0.02em;
+    }
+    .side-card p{
+      margin:0;
+      color:#4b5563;
+      font-size:1rem;
+    }
+    .links{
+      margin-top:18px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#fff;
+      padding:18px 18px 4px;
+    }
+    .link-row{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 0 14px;
+      border-bottom:1px solid #f1f5f9;
+      font-size:.95rem;
+    }
+    .link-row:last-child{border-bottom:none}
+    .section{
+      padding:56px 0;
+    }
+    .section.alt{
+      background:var(--soft);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:end;
+      margin-bottom:28px;
+    }
+    .eyebrow{
+      color:#9ca3af;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.78rem;
+      margin-bottom:8px;
+      font-weight:700;
+    }
+    .section h3{
+      margin:0;
+      font-size:2rem;
+      line-height:1.1;
+      letter-spacing:-0.03em;
+    }
+    .section-desc{
+      max-width:600px;
+      color:#6b7280;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+    .card{
+      padding:24px;
+      box-shadow:0 1px 2px rgba(15,23,42,.03);
+    }
+    .card h4{
+      margin:0;
+      font-size:1.3rem;
+      letter-spacing:-0.02em;
+    }
+    .card p{
+      margin:12px 0 0;
+      color:#4b5563;
+    }
+    .pub{
+      padding:22px 24px;
+      margin-bottom:14px;
+    }
+    .pub .meta{
+      color:#9ca3af;
+      font-size:.88rem;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+    .pub h4{
+      margin:8px 0 8px;
+      font-size:1.3rem;
+      letter-spacing:-0.02em;
+    }
+    .chips{
+      display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;
+    }
+    .chip{
+      display:inline-block;
+      padding:6px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:#4b5563;
+      font-size:.88rem;
+      background:#fff;
+    }
+    .news-item{
+      display:grid;
+      grid-template-columns:120px 1fr;
+      gap:18px;
+      padding:18px 20px;
+      margin-bottom:12px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fff;
+    }
+    .news-date{
+      color:#6b7280;
+      font-weight:600;
+    }
+    .openings-wrap{
+      display:grid;
+      grid-template-columns:.82fr 1.18fr;
+      gap:28px;
+    }
+    .opening{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px 18px;
+      background:#fff;
+      margin-bottom:12px;
+      color:#374151;
+    }
+    .value-box{
+      margin-top:20px;
+      background:#111827;
+      color:#fff;
+      border-radius:18px;
+      padding:20px;
+    }
+    .value-box p{
+      color:#d1d5db;
+      margin:.5rem 0 0;
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .contact-item{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+    }
+    .label{
+      color:#9ca3af;
+      font-size:.88rem;
+      margin-bottom:4px;
+    }
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 36px;
+      color:#6b7280;
+      font-size:.95rem;
+    }
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    @media (max-width: 900px){
+      .hero-grid, .grid-2, .openings-wrap, .contact-grid{
+        grid-template-columns:1fr;
+      }
+      .section-head{
+        flex-direction:column;
+        align-items:start;
+      }
+      .hero h2{font-size:2.5rem}
+      nav{display:none}
+    }
+    @media (max-width: 640px){
+      .container{padding:0 18px}
+      .hero{padding:42px 0}
+      .section{padding:42px 0}
+      .news-item{grid-template-columns:1fr}
+      .hero h2{font-size:2.15rem}
+      .subtitle{font-size:1.12rem}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <h1>Yan Li</h1>
+        <p>Personal Academic Homepage</p>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#news">News</a>
+        <a href="#openings">Openings</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <!-- <div class="pill">Building embodied spatial intelligence systems for real-world robotics</div> -->
+        <h2>Yan Li (李言)</h2>
+        <div class="subtitle">Research Fellow, National University of Singapore · Incoming Assistant Professor, Hong Kong University of Science and Technology (Guangzhou)</div>
+        <p class="lead">
+          My research focuses on robotics, spatial AI, SLAM, 3D/4D scene representation, and Gaussian Splatting.
+          I am interested in how robots can perceive the physical world, build persistent internal models, understand
+          geometry and dynamics, and act intelligently over long horizons. 
+
+          I received my training at Peking University (PKU) and the Technical University of Munich (TUM),
+            where I worked on bundle adjustment, online camera tracking, scene reconstruction,
+            and geometry-aware scene understanding.
+        </p>
+        <p class="lead">
+          My long-term goal is to build next-generation intelligent robots from body to mind,
+          combining robot hardware, spatial understanding, persistent world modeling, and robot action policy learning.
+        </p>
+        <p class="lead">
+          <strong>
+          I am actively recruiting motivated PhD and MPhil students, research assistants, and interns
+          to join Embedded Spatial AI Lab at HKUST(GZ).
+          </strong>
+          </p>
+        <!-- <div class="cta-row"> -->
+          <!-- <a class="btn primary" href="#publications">Selected Publications</a> -->
+          <!-- <a class="btn" href="#openings" color="red">Join Us</a> -->
+          <a class="btn primary" href="#openings">Join the Lab</a>
+        <!-- </div> -->
+      </div>
+
+      <div>
+        <div class="side-card">
+          <div class="photo">
+            <img src="images/LiYan.jpg" alt="Yan Li">
+          </div>
+          <h3>About Me</h3>
+          <p>
+            I am currently a Research Fellow at the National University of Singapore and will join
+            HKUST(GZ) as an Assistant Professor in August 2026.
+
+            <!-- My research lies at the intersection of robotics, spatial AI, SLAM, and 3D/4D scene
+            representation for embodied intelligence systems.
+
+            I received my training at Peking University (PKU) and the Technical University of Munich (TUM),
+            where I worked on bundle adjustment, online camera tracking, scene reconstruction,
+            and geometry-aware scene understanding. -->
+          </p>
+
+
+          <div class="links" style="display:flex; justify-content:space-around; align-items:center; padding:18px;">
+
+            <a href="mailto:yan.li@nus.edu.sg" title="Email" style="text-align:center;">
+              📧
+              <div style="font-size:12px; margin-top:4px;">Email</div>
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=phzz5xcAAAAJ&hl=en"
+              target="_blank" title="Google Scholar" style="text-align:center;">
+              🎓
+              <div style="font-size:12px; margin-top:4px;">Scholar</div>
+            </a>
+
+            <a href="https://github.com/yanyan-li"
+              target="_blank" title="GitHub" style="text-align:center;">
+              💻
+              <div style="font-size:12px; margin-top:4px;">GitHub</div>
+            </a>
+
+            <!-- <a href="#" title="CV" style="text-align:center;">
+              📄
+              <div style="font-size:12px; margin-top:4px;">CV</div>
+            </a> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">About</div>
+          <h3>Research Vision</h3>
+        </div>
+        <div class="section-desc">
+          I study how robots can localize, reconstruct, understand, and interact with the world through structured,
+          geometry-aware, and temporally consistent scene representations.
+        </div>
+      </div>
+
+      <div class="card">
+        <p style="margin:0; font-size:1.04rem;">
+          A central theme of my research is <strong>persistent spatial intelligence</strong>: enabling embodied agents
+          to perceive the world, build internal representations, reason over geometry and dynamics, and support
+          intelligent decision-making and action in real-world environments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Research</div>
+          <h3>Research Areas</h3>
+        </div>
+        <div class="section-desc">
+          My work lies at the intersection of robotics, computer vision, spatial AI, scene representation, and embodied learning.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>Embodied Spatial Perception</h4>
+          <p>Spatial perception for robots in real-world environments, including localization, mapping, geometry, and scene understanding.</p>
+        </div>
+        <div class="card">
+          <h4>3D / 4D Scene Representation</h4>
+          <p>Persistent scene representations for static and dynamic worlds, spanning reconstruction, rendering, Gaussian Splatting, and world modeling.</p>
+        </div>
+        <div class="card">
+          <h4>SLAM and World Models</h4>
+          <p>Geometry-centric tracking, mapping, optimization, and structured spatial representations for long-horizon robot autonomy.</p>
+        </div>
+        <div class="card">
+          <h4>Embodied AI and Robot Learning</h4>
+          <p>Vision-language-action, policy learning, and intelligent robot systems that connect perception, representation, reasoning, and action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Publications</div>
+          <h3>Selected Publications</h3>
+        </div>
+        <div class="section-desc">
+          Representative work across dynamic scene reconstruction, Gaussian Splatting, and geometry-aware spatial intelligence.
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="meta">Selected Publication</div>
+        <h4>MonoDy: Monocular Tracking and 4D Reconstruction in Dynamic Scenes</h4>
+        <p>A monocular RGB-only 4D Gaussian SLAM framework for dynamic scene reconstruction with strong localization and view synthesis quality.</p>
+        <div class="chips">
+          <span class="chip">Paper</span>
+          <span class="chip">Code</span>
+          <span class="chip">Project</span>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="meta">Selected Publication</div>
+        <h4>4D Gaussian Splatting SLAM for Dynamic Scene Reconstruction</h4>
+        <p>A unified 4D Gaussian representation for simultaneous tracking and dynamic scene modeling in robotics settings.</p>
+        <div class="chips">
+          <span class="chip">Paper</span>
+          <span class="chip">Code</span>
+          <span class="chip">Project</span>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="meta">Selected Publication</div>
+        <h4>GRAPe: High-Fidelity 3D Gaussian Reconstruction and Analysis of Plant Environments</h4>
+        <p>High-fidelity Gaussian-based reconstruction and analysis for complex environments with rich structure and appearance.</p>
+        <div class="chips">
+          <span class="chip">Paper</span>
+          <span class="chip">Code</span>
+          <span class="chip">Project</span>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="meta">Selected Publication</div>
+        <h4>Geometry-Aware Spatial Intelligence and SLAM</h4>
+        <p>A line of work on geometry-aware tracking, mapping, optimization, and structured scene representation for robotics.</p>
+        <div class="chips">
+          <span class="chip">Paper</span>
+          <span class="chip">Code</span>
+          <span class="chip">Project</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="section alt">
+    <!-- <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">News</div>
+          <h3>Recent News</h3>
+        </div>
+      </div> -->
+
+      <div class="container">
+      <div class="section-head"><div><div class="eyebrow">News</div><h3>Recent News</h3></div></div>
+      <div class="news-item"><div class="news-date">31 Jan 2026</div><div>One paper is accepted to <strong>ICRA 2026</strong> in Alias-free Gaussian Splatting SLAM.</div></div>
+      <div class="news-item"><div class="news-date">23 Jan 2026</div><div>Serving as Session Co-Chair for <strong>3D Computer Vision 1&amp;2 for AAAI-26</strong>.</div></div>
+      <div class="news-item"><div class="news-date">8 Nov 2025</div><div>Two <strong>oral papers</strong> are accepted to <strong>AAAI 2026</strong> in RiemanLine Parametrization and Active3D.</div></div>
+      <div class="news-item"><div class="news-date">11 Oct 2025</div><div>Appointed as an Associate Editor of <strong>IEEE Robotics and Automation Letters (RA-L)</strong>.</div></div>
+      <div class="news-item"><div class="news-date">19 Sep 2025</div><div>One paper is accepted to <strong>NeurIPS 2025</strong>: 4D3R: Motion-Aware Neural Reconstruction and Rendering of Dynamic Scenes from Monocular Videos.</div></div>
+      <div class="news-item"><div class="news-date">27 Jun 2025</div><div>Three papers are accepted to <strong>ICCV 2025</strong> in 4D SLAM, Scene Graph Prediction, and Autonomous Driving Gaussian Splatting.</div></div>
+      <div style="margin-top:16px;"><a class="btn" href="news.html">More news</a></div>
+    <!-- </div> -->
+
+      <!-- <div class="news-item">
+        <div class="news-date">Apr 2026</div>
+        <div>Building a new research program on embodied spatial intelligence, spanning robot perception, 3D/4D scene representation, and embodied AI.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">2025</div>
+        <div>Organizing the IROS 2025 workshop on Advancements for Intelligent Robotics in 4D Scenes.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">2025</div>
+        <div>Recent work focuses on Gaussian Splatting, 4D scene reconstruction, and persistent spatial intelligence for robotics.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">2024</div>
+        <div>Joined the National University of Singapore as a Research Fellow.</div>
+      </div> -->
+    </div>
+  </section>
+
+  <section id="openings" class="section">
+    <div class="container">
+      <div class="openings-wrap">
+        <div>
+          <div class="eyebrow">Openings</div>
+          <h3>Join the Group</h3>
+          <p class="section-desc" style="max-width:none; margin-top:16px;">
+            I am actively recruiting <strong>PhD students, research assistants, and interns</strong> who are interested
+            in robotics, embodied AI, SLAM, 3D/4D scene representation, robot systems, and intelligent perception.
+          </p>
+        </div>
+
+        <div>
+          <div class="opening">PhD positions in embodied AI, robotics, SLAM, and 3D/4D vision</div>
+          <div class="opening">RA positions in perception, reconstruction, and robot learning</div>
+          <div class="opening">Internships in robot hardware, control, ROS, and intelligent systems</div>
+
+          <div class="value-box">
+            <strong>What I value</strong>
+            <p>Self-drive, curiosity, optimism, strong execution, and the willingness to build both solid theory and real systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" style="border-top:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h3>Contact</h3>
+        </div>
+        <div class="section-desc">
+          Please feel free to reach out for collaboration, student applications, research discussions, or academic opportunities.
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="label">Name</div>
+          <div>Yan Li</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Email</div>
+          <div><a href="mailto:yan.li@nus.edu.sg">yan.li@nus.edu.sg</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Current Position</div>
+          <div>Research Fellow, National University of Singapore</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Incoming Position</div>
+          <div>Assistant Professor, HKUST(GZ), August 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Yan Li</div>
+      <div>Personal academic homepage</div>
+    </div>
+  </footer>
+</body>
+</html>
