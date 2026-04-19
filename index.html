@@ -193,7 +193,7 @@
       letter-spacing:-0.03em;
     }
     .section-desc{
-      max-width:600px;
+      max-width:650px;
       color:#6b7280;
     }
     .grid-2{
@@ -201,6 +201,17 @@
       grid-template-columns:1fr 1fr;
       gap:20px;
     }
+    .grid-3{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:20px;
+      /* align-items: stretch; */
+    }
+    /* .grid-3 .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    } */
     .card{
       padding:24px;
       box-shadow:0 1px 2px rgba(15,23,42,.03);
@@ -213,8 +224,9 @@
     .card p{
       margin:12px 0 0;
       color:#4b5563;
+      /* text-align: justify; */
     }
-    .pub{
+    /* .pub{
       padding:22px 24px;
       margin-bottom:14px;
     }
@@ -229,6 +241,53 @@
       margin:8px 0 8px;
       font-size:1.3rem;
       letter-spacing:-0.02em;
+    } */
+    .pub-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .pub {
+      padding: 22px 24px;
+    }
+
+    .pub-meta {
+      color: #8c1515;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .pub h4 {
+      margin: 0 0 10px 0;
+      font-size: 1.3rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .pub-authors {
+      margin: 0;
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    .pub .chips {
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pub .chip {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: #374151;
+      background: #fff;
     }
     .chips{
       display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;
@@ -427,7 +486,7 @@
     </div>
   </section>
 
-  <section id="about" class="section">
+  <!-- <section id="about" class="section">
     <div class="container">
       <div class="section-head">
         <div>
@@ -448,42 +507,38 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="research" class="section alt">
     <div class="container">
       <div class="section-head">
         <div>
           <div class="eyebrow">Research</div>
-          <h3>Research Areas</h3>
+          <h3>Research Program</h3>
         </div>
         <div class="section-desc">
-          My work lies at the intersection of robotics, computer vision, spatial AI, scene representation, and embodied learning.
+          My research focuses on building embodied spatial intelligence systems that enable robots to perceive, model, reason about, and interact with complex real-world environments.
         </div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-3">
         <div class="card">
-          <h4>Embodied Spatial Perception</h4>
-          <p>Spatial perception for robots in real-world environments, including localization, mapping, geometry, and scene understanding.</p>
+          <h4>Embodied Perception</h4>
+          <p>Geometry-aware perception systems that enable robots to localize, map, and understand complex real-world environments through spatially consistent representations.</p>
         </div>
         <div class="card">
-          <h4>3D / 4D Scene Representation</h4>
-          <p>Persistent scene representations for static and dynamic worlds, spanning reconstruction, rendering, Gaussian Splatting, and world modeling.</p>
+          <h4>Spatial World Modeling</h4>
+          <p>Persistent 3D and 4D world models that support long-horizon robot autonomy through geometry-centric tracking, reconstruction, and structured scene representations.</p>
         </div>
         <div class="card">
-          <h4>SLAM and World Models</h4>
-          <p>Geometry-centric tracking, mapping, optimization, and structured spatial representations for long-horizon robot autonomy.</p>
-        </div>
-        <div class="card">
-          <h4>Embodied AI and Robot Learning</h4>
-          <p>Vision-language-action, policy learning, and intelligent robot systems that connect perception, representation, reasoning, and action.</p>
+          <h4>Robot Learning and Action</h4>
+          <p>Learning-based robot systems that connect perception, representation, and reasoning with decision-making and interaction in dynamic environments.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="publications" class="section">
+  <!-- <section id="publications" class="section">
     <div class="container">
       <div class="section-head">
         <div>
@@ -539,19 +594,159 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+  <section id="publications" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Publications</div>
+        <h3>Selected Publications</h3>
+      </div>
+      <div class="section-desc">
+        *Equal contribution †Corresponding author
+      </div>
+    </div>
+
+    <div class="pub-list">
+
+      <div class="card pub">
+        <div class="pub-meta">ICCV 2025</div>
+        <h4>4D Gaussian Splatting SLAM</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, Y. Fang, Z. Zhu, K. Li, Y. Ding, F. Tombari.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2503.16710">Paper</a>
+          <a class="chip" href="https://yanyan-li.github.io/project/gs/4dgsslam.html">Project Page</a>
+          <a class="chip" href="https://github.com/yanyan-li/4DGS-SLAM">Code</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="pub-meta">ECCV 2024</div>
+        <h4>GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, C. Lyu, Y. Di, G. Zhai, G. H. Lee, F. Tombari.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2407.18945">Paper</a>
+          <a class="chip" href="https://yanyan-li.github.io/project/gs/geogaussian.html">Project Page</a>
+          <a class="chip" href="https://github.com/yanyan-li/GeoGaussian">Code</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="pub-meta">AAAI 2026 Oral</div>
+        <h4>Active3D: Active High-Fidelity 3D Reconstruction via Hierarchical Uncertainty Quantification</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, Y. Li, G. H. Lee.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://yanyan-li.github.io/project/active3d.html">Project Page</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="pub-meta">AAAI 2026 Oral</div>
+        <h4>RiemanLine: Riemannian Manifold Representation of 3D Lines for Factor Graph Optimization</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, Z. Yang, K. Tateno, F. Tombari, L. Zhao, G. H. Lee.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2503.16710">Paper</a>
+          <a class="chip" href="https://github.com/yanyan-li/RiemanLine">Code</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="pub-meta">CVPR 2025</div>
+        <h4>Learnable Infinite Taylor Gaussian for Dynamic View Rendering</h4>
+        <p class="pub-authors">
+          B. Hu*, <strong>Y. Li*</strong>, R. Xie, B. Xu, H. Dong, J. Yao, G. H. Lee.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2503.16710">Paper</a>
+          <a class="chip" href="https://yanyan-li.github.io/project/gs/learnable-infinite-taylor-gaussian.html">Project Page</a>
+          <a class="chip" href="https://github.com/yanyan-li/Learnable-Infinite-Taylor-Gaussian">Code</a>
+        </div>
+      </div>
+       <div class="card pub">
+        <div class="pub-meta">IEEE RA-L 2024</div>
+        <h4>Open-Structure: a Structural Benchmark Dataset for SLAM Algorithms</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, Z. Guo, Z. Yang, Y. Sun, L. Zhao, F. Tombari.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2407.18945">Paper</a>
+          <a class="chip" href="https://yanyan-li.github.io/project/open-structure.html">Project Page</a>
+          <a class="chip" href="https://github.com/yanyan-li/Open-Structure">Code</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="pub-meta">ECCV 2022</div>
+        <h4>E-Graph: Minimal Solution for Rigid Rotation with Extensibility Graphs</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, F. Tombari
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136820298.pdf">Paper</a>
+          <a class="chip" href="https://www.youtube.com/watch?v=lv7omGWBApM">Video</a>
+        </div>
+      </div>
+
+       <div class="card pub">
+        <div class="pub-meta">ICRA 2021</div>
+        <h4>ManhattanSLAM: Robust Planar Tracking and Mapping Leveraging Mixture of Manhattan Frames</h4>
+        <p class="pub-authors">
+          R. Yunus, <strong>Y. Li†</strong>, F. Tombari
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2103.15068">Paper</a>
+          <a class="chip" href="https://github.com/razayunus/ManhattanSLAM">Code</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="pub-meta">ICRA 2021</div>
+        <h4>RGB-D SLAM with Structural Regularities</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, R. Yunus, N. Brasch, N. Navab, F. Tombari.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2010.07997">Paper</a>
+          <a class="chip" href="https://github.com/yanyan-li/PlanarSLAM">Code</a>
+        </div>
+      </div>
+
+      <div class="card pub">
+        <div class="pub-meta">IEEE RA-L / IROS 2020</div>
+        <h4>Structure-SLAM: Low-drift Monocular SLAM in Indoor Environments</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, N. Brasch, Y. Wang, N. Navab, F. Tombari.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://arxiv.org/pdf/2003.06489">Paper</a>
+          <a class="chip" href="https://github.com/yanyan-li/Structure-SLAM">Code</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top: 24px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a class="btn" href="https://scholar.google.com/citations?user=phzz5xcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Full Publication List</a>
+      <!-- <a class="btn" href="#">Full Publication List</a> -->
+    </div>
+  </div>
+</section>
 
   <section id="news" class="section alt">
-    <!-- <div class="container">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">News</div>
-          <h3>Recent News</h3>
-        </div>
-      </div> -->
 
       <div class="container">
       <div class="section-head"><div><div class="eyebrow">News</div><h3>Recent News</h3></div></div>
+      <div class="news-item"><div class="news-date">21 Feb 2026</div><div>One paper is accepted to <strong>CVPR 2026 (Findings)</strong>.</div></div>
+      <div class="news-item"><div class="news-date">7 Feb 2026</div><div>Serving as <strong>Associate Editor (AE)</strong> for <strong>IROS 2026</strong>.</div></div>
       <div class="news-item"><div class="news-date">31 Jan 2026</div><div>One paper is accepted to <strong>ICRA 2026</strong> in Alias-free Gaussian Splatting SLAM.</div></div>
       <div class="news-item"><div class="news-date">23 Jan 2026</div><div>Serving as Session Co-Chair for <strong>3D Computer Vision 1&amp;2 for AAAI-26</strong>.</div></div>
       <div class="news-item"><div class="news-date">8 Nov 2025</div><div>Two <strong>oral papers</strong> are accepted to <strong>AAAI 2026</strong> in RiemanLine Parametrization and Active3D.</div></div>
@@ -559,24 +754,6 @@
       <div class="news-item"><div class="news-date">19 Sep 2025</div><div>One paper is accepted to <strong>NeurIPS 2025</strong>: 4D3R: Motion-Aware Neural Reconstruction and Rendering of Dynamic Scenes from Monocular Videos.</div></div>
       <div class="news-item"><div class="news-date">27 Jun 2025</div><div>Three papers are accepted to <strong>ICCV 2025</strong> in 4D SLAM, Scene Graph Prediction, and Autonomous Driving Gaussian Splatting.</div></div>
       <div style="margin-top:16px;"><a class="btn" href="news.html">More news</a></div>
-    <!-- </div> -->
-
-      <!-- <div class="news-item">
-        <div class="news-date">Apr 2026</div>
-        <div>Building a new research program on embodied spatial intelligence, spanning robot perception, 3D/4D scene representation, and embodied AI.</div>
-      </div>
-      <div class="news-item">
-        <div class="news-date">2025</div>
-        <div>Organizing the IROS 2025 workshop on Advancements for Intelligent Robotics in 4D Scenes.</div>
-      </div>
-      <div class="news-item">
-        <div class="news-date">2025</div>
-        <div>Recent work focuses on Gaussian Splatting, 4D scene reconstruction, and persistent spatial intelligence for robotics.</div>
-      </div>
-      <div class="news-item">
-        <div class="news-date">2024</div>
-        <div>Joined the National University of Singapore as a Research Fellow.</div>
-      </div> -->
     </div>
   </section>
 
@@ -587,22 +764,24 @@
           <div class="eyebrow">Openings</div>
           <h3>Join the Group</h3>
           <p class="section-desc" style="max-width:none; margin-top:16px;">
-            I am actively recruiting <strong>PhD students, research assistants, and interns</strong> who are interested
-            in robotics, embodied AI, SLAM, 3D/4D scene representation, robot systems, and intelligent perception.
+            I am actively recruiting <strong>PhD and MPhil students, research assistants, and interns</strong> to join my lab at HKUST(GZ). My research focuses on VLA,
+            Imitation learning, Reinforcement learning, SLAM, 3D/4D scene representation, and Scene understanding.
           </p>
         </div>
 
         <div>
-          <div class="opening">PhD positions in embodied AI, robotics, SLAM, and 3D/4D vision</div>
+          <div class="opening">PhD and MPhil positions in embodied AI, robotics, SLAM, and 3D/4D vision</div>
           <div class="opening">RA positions in perception, reconstruction, and robot learning</div>
-          <div class="opening">Internships in robot hardware, control, ROS, and intelligent systems</div>
-
-          <div class="value-box">
-            <strong>What I value</strong>
-            <p>Self-drive, curiosity, optimism, strong execution, and the willingness to build both solid theory and real systems.</p>
-          </div>
+          <div class="opening">Internships in robot hardware, control, Robot OS, and intelligent systems</div>
         </div>
       </div>
+      <p>Students are encouraged to contact me with their CV and research interests.</p>
+
+      <div class="value-box">
+            <strong>What I value</strong>
+            <p>Self-motivated, curiosity, optimism, strong execution, and the willingness to build both solid theory and real systems.</p>
+      </div>
+        
     </div>
   </section>
 
@@ -619,18 +798,18 @@
       </div>
 
       <div class="contact-grid">
-        <div class="contact-item">
+        <!-- <div class="contact-item">
           <div class="label">Name</div>
           <div>Yan Li</div>
-        </div>
+        </div> -->
         <div class="contact-item">
           <div class="label">Email</div>
           <div><a href="mailto:yan.li@nus.edu.sg">yan.li@nus.edu.sg</a></div>
         </div>
-        <div class="contact-item">
+        <!-- <div class="contact-item">
           <div class="label">Current Position</div>
           <div>Research Fellow, National University of Singapore</div>
-        </div>
+        </div> -->
         <div class="contact-item">
           <div class="label">Incoming Position</div>
           <div>Assistant Professor, HKUST(GZ), August 2026</div>
