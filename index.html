@@ -319,6 +319,63 @@
       grid-template-columns:.82fr 1.18fr;
       gap:28px;
     }
+    .project-slider-wrapper{
+      position:relative;
+    }
+
+    .project-slider{
+      display:flex;
+      gap:24px;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      padding-bottom:12px;
+      scrollbar-width:none;
+    }
+
+    .project-slider::-webkit-scrollbar{
+      display:none;
+    }
+
+    .project-card{
+      flex:0 0 100%;
+      max-width:1080px;
+    }
+
+
+    /* arrows */
+
+    .slider-btn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      border:1px solid var(--line);
+      background:white;
+      cursor:pointer;
+      font-size:20px;
+      z-index:5;
+    }
+
+    .slider-left{
+      left:-20px;
+    }
+
+    .slider-right{
+      right:-20px;
+    }
+
+
+    @media(max-width:900px){
+    .slider-left{
+      left:5px;
+    }
+
+    .slider-right{
+      right:5px;
+    }
+    }
     .opening{
       border:1px solid var(--line);
       border-radius:18px;
@@ -513,7 +570,7 @@
     </div>
   </section>
 
-  <section id="featured-project" class="section">
+  <!-- <section id="featured-project" class="section">
   <div class="container">
     <div class="section-head">
       <div>
@@ -573,14 +630,161 @@
       </p>
     </div>
   </div>
+</section> -->
+
+<section id="featured-project" class="section">
+
+  <div class="container">
+
+  <div class="section-head">
+  <div>
+  <div class="eyebrow">Featured Projects</div>
+  <h3>Research & Engineering Projects</h3>
+  </div>
+
+  <div class="section-desc">
+  We are actively recruiting motivated interns and research assistants to work on robotics, embodied AI, and intelligent systems.
+  </div>
+
+  </div>
+
+
+  <div class="project-slider-wrapper">
+
+  <button class="slider-btn slider-left"
+  onclick="document.getElementById('projectSlider').scrollBy({left:-1100,behavior:'smooth'})">
+  ‹
+  </button>
+
+
+  <div class="project-slider" id="projectSlider">
+
+
+  <!-- Project 1 -->
+  <div class="project-card">
+    <div class="grid-2">
+        <div class="card">
+          <h4>
+          Embodied Robot Platform Design and Development
+          </h4>
+          <p>
+          We are developing next-generation embodied robotic platforms,
+          including robotic arms, quadruped robots, dexterous hands,
+          and tactile sensing systems.
+          </p>
+          <p>
+          The project focuses on the design and integration of robotic arms,
+          quadruped robots, and customized robotic platforms for real-world applications.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>
+          We Are Looking For
+          </h4>
+          <p>
+          We welcome motivated students, interns and research assistants with interests in:
+          </p>
+
+          <div class="chips">
+            <span class="chip">Robot mechanical design</span>
+            <span class="chip">Industrial design</span>
+            <span class="chip">CAD / SolidWorks</span>
+            <span class="chip">Robotics hardware development</span>
+            <span class="chip">Robot control</span>
+            <span class="chip">Sensor integration</span>
+          </div>
+        </div>
+    </div>
+
+    <div class="value-box">
+      <strong>
+      Opportunities
+      </strong>
+      <p>
+      Outstanding students may participate in the development of
+      our in-house robotic platforms and contribute to future research
+      projects in embodied AI.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Project 2 -->
+  <div class="project-card">
+    <div class="grid-2">
+    <div class="card">
+    <h4>
+    Multi-Sensor Localization, Mapping and Navigation
+    </h4>
+    <p>
+    We are building a next-generation multi-sensor localization and mapping system for autonomous inspection robots.
+    The system integrates GNSS/RTK, LiDAR, RGB cameras, IMU, wheel odometry, and Gaussian Splatting-based mapping.
+    </p>
+
+    <p>
+    The goal is robust localization and high-fidelity 3D reconstruction in large-scale outdoor environments.
+    </p>
+    </div>
+
+    <div class="card">
+    <h4>
+    We Are Looking For
+    </h4>
+    <p>
+    Students interested in robotics, SLAM, computer vision, and autonomous systems.
+    </p>
+
+    <div class="chips">
+    <span class="chip">ROS2</span>
+    <span class="chip">FAST-LIO</span>
+    <span class="chip">LIO-SAM</span>
+    <span class="chip">RTK/GNSS</span>
+    <span class="chip">VINS-Fusion</span>
+    <span class="chip">Factor Graph</span>
+    <span class="chip">3D Reconstruction</span>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="value-box">
+
+    <strong>
+    Opportunities
+    </strong>
+    <p>
+    Outstanding students may be recommended for HKUST(GZ) PhD admission.
+    </p>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+<button class="slider-btn slider-right"
+onclick="document.getElementById('projectSlider').scrollBy({left:1100,behavior:'smooth'})">
+›
+</button>
+
+
+</div>
+
+
+</div>
+
 </section>
 
   <section id="news" class="section alt">
 
       <div class="container">
       <div class="section-head"><div><div class="eyebrow">News</div><h3>Recent News</h3></div></div>
-      <div class="news-item"><div class="news-date">10 July 2026</div><div>One paper is accepted to <strong>ACMMM 2026 </strong>.</div></div>
-      <div class="news-item"><div class="news-date">18 June 2026</div><div>Three papers are accepted to <strong>ECCV 2026 </strong>.</div></div>
+      <div class="news-item"><div class="news-date">10 July 2026</div><div>One paper is accepted to <strong>ACMMM 2026</strong>.</div></div>
+      <div class="news-item"><div class="news-date">18 June 2026</div><div>Three papers are accepted to <strong>ECCV 2026</strong>.</div></div>
       <div class="news-item"><div class="news-date">21 Feb 2026</div><div>One paper is accepted to <strong>CVPR 2026 (Findings)</strong>.</div></div>
       <div class="news-item"><div class="news-date">7 Feb 2026</div><div>Serving as <strong>Associate Editor (AE)</strong> for <strong>IROS 2026</strong>.</div></div>
       <div class="news-item"><div class="news-date">31 Jan 2026</div><div>One paper is accepted to <strong>ICRA 2026</strong> in Alias-free Gaussian Splatting SLAM.</div></div>
