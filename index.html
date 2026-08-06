@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yan Li</title>
   <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta name="description" content="Yan Li - Research Fellow at NUS, Incoming Assistant Professor at HKUST(GZ). Research in Robotics, Spatial AI, SLAM, and 3D/4D Gaussian Splatting." />
+  <meta name="description" content="Yan Li - Assistant Professor at HKUST(GZ). Research in Robot Learning, Action Models, and 3D/4D Perception." />
   <style>
     :root{
       --bg:#ffffff;
@@ -302,17 +302,23 @@
     }
     .news-item{
       display:grid;
-      grid-template-columns:120px 1fr;
-      gap:18px;
-      padding:18px 20px;
-      margin-bottom:12px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:#fff;
+      grid-template-columns:108px 1fr;
+      gap:14px;
+      align-items:baseline;
+      padding:9px 4px;
+      border-bottom:1px solid var(--line);
+      font-size:.96rem;
+      line-height:1.45;
     }
     .news-date{
       color:#6b7280;
       font-weight:600;
+      font-size:.9rem;
+      white-space:nowrap;
+    }
+
+    #news .section-head{
+      margin-bottom:14px;
     }
     .openings-wrap{
       display:grid;
@@ -365,7 +371,19 @@
     .slider-right{
       right:-20px;
     }
+    
+    @media (max-width: 640px){
+      .news-item{
+        grid-template-columns:96px 1fr;
+        gap:10px;
+        padding:8px 0;
+        font-size:.92rem;
+      }
 
+      .news-date{
+        font-size:.84rem;
+      }
+    }
 
     @media(max-width:900px){
     .slider-left{
@@ -467,27 +485,34 @@
       <div>
         <!-- <div class="pill">Building embodied spatial intelligence systems for real-world robotics</div> -->
         <h2>Yan Li (李言)</h2>
-        <div class="subtitle">Research Fellow, National University of Singapore · Incoming Assistant Professor, Hong Kong University of Science and Technology (Guangzhou)</div>
+        <div class="subtitle">Assistant Professor, Hong Kong University of Science and Technology (Guangzhou)</div>
         <p class="lead">
-          My research focuses on robotics, spatial AI, SLAM, 3D/4D scene representation, and Gaussian Splatting.
-          I am interested in how robots can perceive the physical world, build persistent internal models, understand
-          geometry and dynamics, and act intelligently over long horizons. 
+          My research aims to build embodied spatial intelligence systems that enable robots to perceive their surroundings, 
+          maintain persistent spatial memory, predict the consequences of actions, and acquire robust skills for long-horizon interaction. 
+          This research integrates spatial perception, embodied foundation models, robot policy learning, and the co-design of robot bodies and sensing systems.
+          <!-- My research focuses on robotics, spatial AI, SLAM, 3D/4D scene representation, and Gaussian Splatting. -->
+          <!-- I am interested in how robots can perceive the physical world, build persistent internal models, understand -->
+          <!-- geometry and dynamics, and act intelligently over long horizons.  -->
 
-          I completed my master's and PhD at Peking University and the Technical University of Munich, where I worked on nonlinear least-squares optimization and Geometric Computer Vision.
-
-
+          
           <!-- I serve as an Associate Editor for IEEE RA-L in the Localization and Mapping area and as an Organizer of the IROS 2025 Workshop “Advancements for Intelligent Robotics in 4D Scenes (AIR4D)”. He is also serving as an Area Chair for IROS2026. -->
 
           
         </p>
         <p class="lead">
-          My long-term goal is to build next-generation intelligent robots from body to mind,
-          combining robot hardware, spatial understanding, persistent world modeling, and robot action policy learning.
+          I completed my master's and PhD at Peking University and the Technical University of Munich, where I worked on nonlinear least-squares optimization and Geometric Computer Vision.
+
+          <!-- Before joining HKUST(GZ), I was a Research Fellow at the National University of Singapore, where I worked on 3D/4D scene represenatation, understanding, and spatial intelligence. -->
+
+          <!-- My long-term goal is to build next-generation intelligent robots from body to mind, -->
+          <!-- combining robot hardware, spatial understanding, persistent world modeling, and robot action policy learning. -->
         </p>
         <p class="lead">
           <strong>
-          I am actively recruiting motivated PhD and MPhil students, research assistants, and interns
-          to join <a href="https://emsail-group.github.io/" style="color:blue; text-decoration:underline;">Embodied Spatial AI Lab</a> at HKUST(GZ), starting from Fall 2026 and Spring 2027.
+          I am actively recruiting motivated students and researchers to join the <a href="https://emsail-group.github.io/" style="color:blue; text-decoration:underline;">Embodied Spatial AI Lab</a> at HKUST(GZ). 
+          Openings are available for MPhil students, research assistants, and interns starting in Fall 2026, and for PhD students starting in Spring/Fall 2027.
+          <!-- I am actively recruiting motivated PhD and MPhil students, research assistants, and interns -->
+          <!-- to join <a href="https://emsail-group.github.io/" style="color:blue; text-decoration:underline;">Embodied Spatial AI Lab</a> at HKUST(GZ), starting from Fall 2026 and Spring 2027. -->
           </strong>
           </p>
           <a class="btn primary" href="#openings">Join the Lab</a>
@@ -503,8 +528,7 @@
 
           <h3>About Me</h3>
           <p>
-            I am currently a Research Fellow at the National University of Singapore and will join
-            HKUST(GZ) as an Assistant Professor in August 2026. 
+            Assistant Professor @HKUST(GZ). Before joining HKUST(GZ), I was a Research Fellow at NUS in Singapore.
           </p>
 
           <p>
@@ -814,6 +838,17 @@ onclick="document.getElementById('projectSlider').scrollBy({left:1100,behavior:'
     </div>
 
     <div class="pub-list">
+
+      <div class="card pub">
+        <div class="pub-meta">AAAI 2026 Oral</div>
+        <h4>Structure Gaussian Splatting SLAM</h4>
+        <p class="pub-authors">
+          <strong>Y. Li</strong>, Y. Li, G. H. Lee.
+        </p>
+        <div class="chips">
+          <a class="chip" href="https://github.com/yanyan-li/StructureGS-SLAM">Project Page</a>
+        </div>
+      </div>
       
       <div class="card pub">
         <div class="pub-meta">AAAI 2026 Oral</div>
