@@ -279,6 +279,147 @@
       flex-wrap: wrap;
     }
 
+    .openings-section {
+  background: #ffffff;
+}
+
+.openings-header {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 32px;
+}
+
+.openings-intro {
+  margin: 0;
+  max-width: 680px;
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+.position-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.position-card {
+  min-height: 220px;
+  padding: 26px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #ffffff;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.position-card:hover {
+  transform: translateY(-3px);
+  border-color: #94a3b8;
+}
+
+.position-type {
+  margin-bottom: 18px;
+  color: #8c1515;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.position-card h4 {
+  margin: 0 0 12px;
+  color: #172033;
+  font-size: 1.3rem;
+}
+
+.position-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.featured-position {
+  background: #f8fafc;
+}
+
+.openings-bottom {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #111827;
+}
+
+.research-label {
+  margin-bottom: 14px;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.research-tags span {
+  padding: 7px 12px;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  color: #e2e8f0;
+  font-size: 0.88rem;
+}
+
+.application-box {
+  padding-left: 28px;
+  border-left: 1px solid #334155;
+}
+
+.application-box p {
+  margin: 0 0 16px;
+  color: #cbd5e1;
+}
+
+.apply-button {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 650;
+}
+
+.apply-button:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .openings-header,
+  .openings-bottom {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .position-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .position-card {
+    min-height: auto;
+  }
+
+  .application-box {
+    padding-left: 0;
+    padding-top: 22px;
+    border-left: none;
+    border-top: 1px solid #334155;
+  }
+}
+
     .pub .chip {
       display: inline-block;
       padding: 6px 12px;
@@ -512,11 +653,17 @@
           <strong>
           I am actively recruiting motivated students and researchers to join the <a href="https://emsail-group.github.io/" style="color:blue; text-decoration:underline;">Embodied Spatial AI Lab</a> at HKUST(GZ). 
           Openings are available for MPhil students, research assistants, and interns starting in Fall 2026, and for PhD students starting in Spring/Fall 2027.
+          HKUST(GZ) undergraduate students are also welcome to join the lab through the Explorers Undergraduate Research Program (X Program).
           <!-- I am actively recruiting motivated PhD and MPhil students, research assistants, and interns -->
           <!-- to join <a href="https://emsail-group.github.io/" style="color:blue; text-decoration:underline;">Embodied Spatial AI Lab</a> at HKUST(GZ), starting from Fall 2026 and Spring 2027. -->
           </strong>
           </p>
-          <a class="btn primary" href="#openings">Join the Lab</a>
+        <!-- <p class="lead", style="text-align: justify;">
+          <strong>
+          HKUST(GZ) undergraduate students are also welcome to join the lab through the Explorers Undergraduate Research Program (X Program).
+          </strong>
+          </p>   -->
+        <a class="btn primary" href="#openings">Join the Lab</a>
 
       </div>
 
@@ -933,34 +1080,83 @@ onclick="document.getElementById('projectSlider').scrollBy({left:1100,behavior:'
   </div>
 </section>
 
-  
-  <section id="openings" class="section">
+    <section id="openings" class="section openings-section">
     <div class="container">
-      <div class="openings-wrap">
+
+      <div class="openings-header">
         <div>
           <div class="eyebrow">Openings</div>
-          <h3>Join the EmSAIL Group</h3>
-          <p class="section-desc" style="max-width:none; margin-top:16px; text-align: justify;">
-            I am actively recruiting <strong>PhD and MPhil students, research assistants, and interns</strong> to join the <a href="https://emsail-group.github.io/" style="color:blue; text-decoration:underline;">EmSAIL Group</a> at HKUST(GZ). My research focuses on VLA,
-            Imitation learning, Reinforcement learning, SLAM, 3D/4D scene representation, and Scene understanding.
+          <h3>Join EmSAIL</h3>
+        </div>
+
+        <p class="openings-intro">
+          We welcome motivated students and researchers interested in
+          Spatial Intelligence, Foundation Models, and Robot Learning & Systems.
+        </p>
+      </div>
+
+      <div class="position-grid">
+
+        <div class="position-card">
+          <div class="position-type">Graduate Study</div>
+          <h4>PhD & MPhil Students</h4>
+          <p>
+            PhD openings are available for Spring/Fall 2027.
+            MPhil applications are welcome from Fall 2026.
           </p>
         </div>
 
+        <div class="position-card">
+          <div class="position-type">Research Experience</div>
+          <h4>RA & Interns</h4>
+          <p>
+            Opportunities are available in perception, reconstruction,
+            robot learning, hardware, and intelligent systems.
+          </p>
+        </div>
+
+        <div class="position-card featured-position">
+          <div class="position-type">HKUST(GZ) Undergraduates</div>
+          <h4>X Program</h4>
+          <p>
+            Undergraduate students may join the lab through the
+            Explorers Undergraduate Research Program.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="openings-bottom">
         <div>
-          <div class="opening">PhD and MPhil positions in embodied AI, robotics, SLAM, and 3D/4D vision</div>
-          <div class="opening">RA positions in perception, reconstruction, and robot learning</div>
-          <div class="opening">Internships in robot hardware, control, Robot OS, and intelligent systems</div>
+          <div class="research-label">Research Areas</div>
+
+          <div class="research-tags">
+            <span>Embodied Spatial Intelligence</span>
+            <span>Robot Learning</span>
+            <span>VLA & World Models</span>
+            <span>SLAM</span>
+            <span>3D/4D Reconstruction</span>
+            <span>Scene Understanding</span>
+            <span>Robotic Systems</span>
+          </div>
+        </div>
+
+        <div class="application-box">
+          <p>
+            Please send your <strong>CV</strong>, research interests,
+            and a brief description of relevant experience.
+          </p>
+
+          <a class="apply-button" href="#contact">
+             <div><a href="mailto:yanli.hkustgz@gmail.com">Apply →</a></div>
+          </a>
         </div>
       </div>
-      <p>Students are encouraged to contact me with their CV and research interests.</p>
 
-      <div class="value-box">
-            <strong>What I value</strong>
-            <p>Self-motivation, curiosity, strong execution, and the ability to connect solid theoretical understanding with real-world robotic systems.</p>
-      </div>
-        
     </div>
   </section>
+
+  
 
   <section id="contact" class="section" style="border-top:1px solid var(--line);">
     <div class="container">
